@@ -18,12 +18,19 @@ public class PlayerController : MonoBehaviour
     public PlayerState currentState;        //Determines which state the player is currently in
 
     private Vector2 direction;
+    public GameObject bow;                  //Could be replaced with gun? crossbow? blood? any other ranged attack
+    public GameObject arrow;                //Same here. could be replaced with anything else
+
     Rigidbody2D rb;
+    Camera mainCam;
+    private Vector3 mousePos;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         currentState = PlayerState.moving;
+        bow.SetActive(false);
     }
 
     void Update() 
@@ -35,19 +42,20 @@ public class PlayerController : MonoBehaviour
             direction.x = Input.GetAxisRaw("Horizontal");   //Get Horizontal Inputs (A or D | Left or Right)
             direction.y = Input.GetAxisRaw("Vertical");     //Get Vertical Inputs (W or S | Up or Down)
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0))           //Left Mouse = Attack
             {
                 Debug.Log("Attack Button Pressed!");
                 currentState = PlayerState.attacking;
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse1))           //Right Mouse (Hold) = Aim Ranged Attack
             {
                 Debug.Log("Ranged Button Pressed!");
+                bow.SetActive(true);
                 currentState = PlayerState.aiming;
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift))        //LShift = Dash/Roll
             {
                 Debug.Log("Dash Button Pressed!");
                 currentState = PlayerState.dashing;
@@ -72,11 +80,19 @@ public class PlayerController : MonoBehaviour
         //Used for player ranged attacks (eventually?)
         else if (currentState == PlayerState.aiming)
         {
-            direction = Vector2.zero;                 //Stops movement before aiming
+            direction = Vector2.zero;                       //Stops movement before aiming
+
+            mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 rotation = mousePos - transform.position;
+            float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+            bow.transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
             if (Input.GetKeyUp(KeyCode.Mouse1))
             {
-                Debug.Log("Ranged Button Released!");
+                Debug.Log("Ranged Button Released!");       //Right Mouse (Release) = Shoot Ranged Attack
+                Instantiate(arrow, transform.position, Quaternion.identity);
+
+                bow.SetActive(false);
                 currentState = PlayerState.moving;
             }
         }
