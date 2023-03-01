@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   lifeTime: 3
+  arrowSFX: {fileID: 1700171136920089264, guid: 2a09989c497b03049af3182f05096fac, type: 3}

@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header("Main Variables")]
     public float speed = 10f;               //Player speed
     private Vector2 direction;              //Player direction (based on movement inputs [WASD])
-    public GameObject rotationPoint;        
+    public GameObject rotationPoint;
 
     [Header("Ranged Variables")]
     
