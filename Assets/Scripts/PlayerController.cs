@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : DamageableEntity
 {
     public enum PlayerState
     {
@@ -112,7 +112,15 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Mouse1))
             {
                 Debug.Log("Ranged Button Released!");       //Right Mouse (Release) = Shoot Ranged Attack
-                Instantiate(arrow, transform.position, Quaternion.identity);
+                                                            // The distance you want to spawn the object away from the source
+                float distance = 1.0f;
+
+                // Determine the direction based on the Quaternion identity
+                Vector3 direction = Quaternion.identity * Vector3.right;
+                Debug.Log("Player location " + transform.position);
+                Debug.Log("Spawn Position " + (transform.position + direction * distance));
+                // Instantiate the object at a position that is distance units away from the source
+                Instantiate(arrow, transform.position + (rotationPoint.transform.rotation * Vector3.right), Quaternion.identity);
 
                 rotationPoint.SetActive(false);
                 currentState = PlayerState.moving;
