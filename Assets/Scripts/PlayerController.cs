@@ -19,19 +19,21 @@ public class PlayerController : MonoBehaviour
     public float speed = 10f;               //Player speed
     private Vector2 direction;              //Player direction (based on movement inputs [WASD])
     public GameObject rotationPoint;
+    private PlayerHealth playerHealth;
 
     [Header("Ranged Variables")]
     
-    public GameObject arrow;                //Same here. could be replaced with anything else
+    public GameObject arrow;                //Arrow is temporary, could be replaced with anything else
+    public int arrowCost = 20;
 
     [Header("Melee Variables")]
     private float attackTimer = 0f;         //Duration of melee attack(s)
 
     Rigidbody2D rb;
     Animator anim;
-    private AnimationClip[] clips;          //Stores all animation clips (used to get animation lengths)
+    AnimationClip[] clips;          //Stores all animation clips (used to get animation lengths)
     Camera mainCam;
-    private Vector3 mousePos;
+    Vector3 mousePos;
 
     void Start()
     {
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         currentState = PlayerState.moving;
         rotationPoint.SetActive(false);
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     void Update() 
@@ -67,7 +70,7 @@ public class PlayerController : MonoBehaviour
             }
 
             //Ranged Attack (Right Mouse)
-            if (Input.GetKeyDown(KeyCode.Mouse1))           //Right Mouse (Hold) = Aim Ranged Attack
+            if (Input.GetKeyDown(KeyCode.Mouse1) && playerHealth.GetBlood() >= arrowCost)           //Right Mouse (Hold) = Aim Ranged Attack
             {
                 Debug.Log("Ranged Button Pressed!");
                 direction = Vector2.zero;                   //Stops movement before aiming
@@ -113,6 +116,7 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Ranged Button Released!");       //Right Mouse (Release) = Shoot Ranged Attack
                 Instantiate(arrow, transform.position, Quaternion.identity);
+                playerHealth.UseBlood(arrowCost);
 
                 rotationPoint.SetActive(false);
                 currentState = PlayerState.moving;
