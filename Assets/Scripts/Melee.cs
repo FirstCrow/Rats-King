@@ -19,7 +19,7 @@ public class Melee : MonoBehaviour
         if (HitObject != null)
         {
             HitObject.TakeDamage(damage);
-            hitbox.enabled = false;
+            //hitbox.enabled = false;
         }
         
     }
