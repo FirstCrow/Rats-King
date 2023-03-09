@@ -5,6 +5,7 @@ using UnityEngine;
 //Thanks to https://youtu.be/-bkmPm_Besk for the code
 public class Arrow : MonoBehaviour
 {
+    public float damage = 1f;
     public float speed = 10f;           //Projectile speed of arrow
     public float lifeTime = 3f;         //Time before bullet destroys 
     public GameObject arrowSFX;         //Arrow SFX prefab
@@ -38,5 +39,15 @@ public class Arrow : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Collider entered");
+        DamageableEntity HitObject = other.GetComponent<DamageableEntity>();
+        if (HitObject != null) {
+            HitObject.TakeDamage(damage);
+        }
+        Destroy(gameObject);
     }
 }

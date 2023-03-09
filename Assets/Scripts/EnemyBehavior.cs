@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class EnemyBehavior : MonoBehaviour
+public class EnemyBehavior : DamageableEntity
 {
     public float speed = 5f;                //Enemy move speed
     public float detectRadius = 1f;         //Enemy detection radius
