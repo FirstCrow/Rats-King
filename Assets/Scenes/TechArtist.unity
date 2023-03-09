@@ -4190,6 +4190,7 @@ MonoBehaviour:
   speed: 7
   rotationPoint: {fileID: 1366974449}
   arrow: {fileID: 2307157540231039870, guid: 17249882aaad3334ebc2fdaceefbc0a4, type: 3}
+  arrowCost: 20
 --- !u!212 &494073456
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4307,10 +4308,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  slider: {fileID: 392712881}
+  healthSlider: {fileID: 392712881}
   delaySlider: {fileID: 1129583987}
   delayDuration: 2
   healthText: {fileID: 1741349256}
+  maxBlood: 100
+  bloodSlider: {fileID: 452396984}
 --- !u!1 &578743378
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,7 +4977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.38313746, b: 0.36320752, a: 1}
+  m_Color: {r: 0.36405307, g: 0.9528302, b: 0.4374166, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
