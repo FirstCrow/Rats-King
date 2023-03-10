@@ -3769,6 +3769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035136fddca28364cb8c64cae9040f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
   speed: 2
   detectRadius: 10
   player: {fileID: 494073453}
@@ -4186,6 +4187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee63ef08ec8d7e47bf6cd7b8ab06c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
   currentState: 0
   speed: 7
   rotationPoint: {fileID: 1366974449}
@@ -4597,6 +4599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035136fddca28364cb8c64cae9040f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
   speed: 2
   detectRadius: 8
   player: {fileID: 494073453}
@@ -4783,10 +4786,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -5186,6 +5189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035136fddca28364cb8c64cae9040f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
   speed: 2
   detectRadius: 8
   player: {fileID: 494073453}
