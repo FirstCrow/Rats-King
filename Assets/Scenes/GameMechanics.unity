@@ -4396,6 +4396,8 @@ MonoBehaviour:
   rotationPoint: {fileID: 1366974449}
   arrow: {fileID: 2307157540231039870, guid: 17249882aaad3334ebc2fdaceefbc0a4, type: 3}
   arrowCost: 20
+  AllowDash: 1
+  DashTime: 0.1
 --- !u!212 &494073456
 SpriteRenderer:
   m_ObjectHideFlags: 0

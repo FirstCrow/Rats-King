@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Can be inherited by the player, enemies, or any object that will take damage and then be destroyed
 public class DamageableEntity : MonoBehaviour
 {
 
@@ -18,15 +19,5 @@ public class DamageableEntity : MonoBehaviour
     public void Die() {
         Destroy(gameObject);
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

@@ -29,7 +29,11 @@ public class PlayerController : DamageableEntity
     [Header("Melee Variables")]
     private float attackTimer = 0f;         //Duration of melee attack(s)
 
+    public bool AllowDash = true;   //Used to only allow one dash at a time and to limit the use of dashes
+    public float DashTime = .1f;
+
     Rigidbody2D rb;
+    Collider2D hitbox;
     Animator anim;
     AnimationClip[] clips;          //Stores all animation clips (used to get animation lengths)
     Camera mainCam;
@@ -44,6 +48,7 @@ public class PlayerController : DamageableEntity
         currentState = PlayerState.moving;
         rotationPoint.SetActive(false);
         playerHealth = GetComponent<PlayerHealth>();
+        hitbox = GetComponent<Collider2D>();
     }
 
     void Update() 
@@ -90,7 +95,9 @@ public class PlayerController : DamageableEntity
         //Used whenever the player dashes
         else if (currentState == PlayerState.dashing)
         {
-            currentState = PlayerState.moving;
+            if (AllowDash) {
+                StartCoroutine(Dash());
+            }
         }
 
         //-----ATTACKING STATE-----
@@ -201,5 +208,29 @@ public class PlayerController : DamageableEntity
 
         Debug.LogError("Animation clip name not found!: " + name);
         return 0f;
+    }
+
+    IEnumerator Dash() {
+        AllowDash = false;      //Stops dash from being called repeatedly
+        hitbox.enabled = false;
+        float baseSpeed = speed;    //Saves the original speed 
+        
+        
+        speed *= 9;     //Because of fixed update I can't just set a temp speed here, I have to change the speed thats being called every update
+        //Speed and Dashtime are used to determine the distance the player will travel in the dash, I thought .1 seconds at a speed of 9 looked nice
+        yield return new WaitForSeconds(DashTime);
+        
+        hitbox.enabled = true;
+        speed = 0;
+
+        yield return new WaitForSeconds(.5f);   //Creates a delay after the dash where the player can be hit and they cant move
+
+        //Returns control and normal speed back to the player
+        speed = baseSpeed;
+        currentState = PlayerState.moving;
+
+        //Another timer could be implemented here to stop the player from spamming dashes
+        //I think the half second delay already accomplished that so I wont add it 
+        AllowDash = true;
     }
 }
