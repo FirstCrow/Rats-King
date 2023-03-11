@@ -3897,6 +3897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035136fddca28364cb8c64cae9040f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
   speed: 2
   detectRadius: 10
   player: {fileID: 494073453}
@@ -4165,11 +4166,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee63ef08ec8d7e47bf6cd7b8ab06c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
   currentState: 0
   speed: 7
   rotationPoint: {fileID: 1366974449}
   arrow: {fileID: 2307157540231039870, guid: 17249882aaad3334ebc2fdaceefbc0a4, type: 3}
   arrowCost: 20
+  AllowDash: 1
+  DashTime: 0.1
 --- !u!212 &494073456
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4438,6 +4442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035136fddca28364cb8c64cae9040f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
   speed: 2
   detectRadius: 8
   player: {fileID: 494073453}
@@ -4744,6 +4749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035136fddca28364cb8c64cae9040f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
   speed: 2
   detectRadius: 8
   player: {fileID: 494073453}
@@ -4940,7 +4946,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1884319097
 GameObject:
