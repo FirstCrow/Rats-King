@@ -6,6 +6,7 @@ public class Melee : MonoBehaviour
 {
     public float damage;
     public Collider2D hitbox;
+
     // Start is called before the first frame update
     void Start()
     {
