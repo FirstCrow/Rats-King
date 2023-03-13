@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6733180650253901098}
   - component: {fileID: 6733180650253901099}
   - component: {fileID: 6733180650253901104}
+  - component: {fileID: 8502893181917504067}
   m_Layer: 0
   m_Name: tempPlayer
   m_TagString: Player
@@ -186,6 +187,20 @@ MonoBehaviour:
   healthText: {fileID: 0}
   maxBlood: 100
   bloodSlider: {fileID: 0}
+--- !u!114 &8502893181917504067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6733180650253901097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e58aa368b1f7374cae17509f3bc4fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstep: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!1 &6733180650404955598
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +213,7 @@ GameObject:
   - component: {fileID: 6733180650404955592}
   - component: {fileID: 6733180650404955593}
   - component: {fileID: 6733180650404955594}
+  - component: {fileID: 1441586718}
   m_Layer: 0
   m_Name: Hurtbox
   m_TagString: Untagged
@@ -312,6 +328,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   hitbox: {fileID: 0}
+--- !u!114 &1441586718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6733180650404955598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fdc77a9d28a074d8bd809011a01f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WallSFX: {fileID: 1438079166992503674, guid: 7b2513da62bb4564487c9f7f12df810a, type: 3}
+  EnemyHitSFX: {fileID: 2999544052859472349, guid: 7d6235472466af94a859d9dc6738b8be, type: 3}
 --- !u!1 &6733180651006608957
 GameObject:
   m_ObjectHideFlags: 0

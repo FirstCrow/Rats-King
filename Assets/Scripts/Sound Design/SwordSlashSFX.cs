@@ -14,6 +14,7 @@ public class SwordSlashSFX : MonoBehaviour
 
     public GameObject WallSFX;
     public GameObject EnemyHitSFX;
+    public GameObject WoodBreakingSFX;
 
     // Start is called before the first frame update
     //------------------------------------------------
@@ -37,6 +38,10 @@ public class SwordSlashSFX : MonoBehaviour
         else if (other.tag == "Enemy")
         {
             Instantiate(EnemyHitSFX);
+        }
+        else if (other.tag == "Wood")
+        {
+            Instantiate(WoodBreakingSFX);
         }
     }
 }
