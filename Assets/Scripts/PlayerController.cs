@@ -38,6 +38,7 @@ public class PlayerController : DamageableEntity
     AnimationClip[] clips;          //Stores all animation clips (used to get animation lengths)
     Camera mainCam;
     Vector3 mousePos;
+    public GameObject slashingSFX;  //Variable to reference slashing sound effect
 
     void Start()
     {
@@ -72,6 +73,8 @@ public class PlayerController : DamageableEntity
                 //Ideally, the player will be pushed forwards slightly here
                 attackTimer = GetAnimationClipLength("Player_Melee_1");
                 currentState = PlayerState.attacking;
+
+                Instantiate(slashingSFX);
             }
 
             //Ranged Attack (Right Mouse)
