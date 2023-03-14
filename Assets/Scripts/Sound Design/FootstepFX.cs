@@ -8,7 +8,7 @@ public class FootstepFX : MonoBehaviour
 
     private bool footstepsPlaying;
     public AudioSource footstep;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()

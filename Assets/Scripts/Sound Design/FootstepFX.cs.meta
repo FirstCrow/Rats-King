@@ -4,8 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - footstep: {fileID: 7547635384756435148, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}
-  - rb: {instanceID: 0}
+  - footstep: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
