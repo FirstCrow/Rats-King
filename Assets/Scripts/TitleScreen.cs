@@ -15,6 +15,10 @@ public class TitleScreen : MonoBehaviour
     public List<Vector2> arrowPositions;
     private int arrowIndex;
 
+    public AudioSource scroll;              // Scroll SFX prefab
+    public AudioSource select;              // Select SFX prefab
+    private int pastArrowIndex;             // Used to track when the arrow switches indexes for SFX
+
     void Start()
     {
         arrowIndex = 0;
@@ -23,6 +27,8 @@ public class TitleScreen : MonoBehaviour
 
     void Update()
     {
+        pastArrowIndex = arrowIndex;
+
         if (Input.GetKeyDown(KeyCode.W))    //Navigate Up
         {
             arrowIndex = Mathf.Clamp(--arrowIndex, 0, arrowPositions.Count - 1);
@@ -48,22 +54,32 @@ public class TitleScreen : MonoBehaviour
                     break;
             }
         }
+
+
+        if (pastArrowIndex != arrowIndex)           // Checks if the arrow has changed index and plays sound effect if true
+        {
+            Instantiate(scroll);
+        }
+
+
     }
 
     public void StartGame()
     {
+        Instantiate(select);                        // Plays select SFX
         SceneManager.LoadScene("TechArtist");
         Debug.Log("Start Button Clicked");
     }
 
     public void OpenOptions()
     {
-
+        Instantiate(select);                        // Plays select SFX
         Debug.Log("Options Button Clicked");
     }
 
     public void ExitGame()
     {
+        Instantiate(select);                        // Plays select SFX
         Application.Quit();
         Debug.Log("Exit Button Clicked");
     }
@@ -71,6 +87,11 @@ public class TitleScreen : MonoBehaviour
     public void MouseOverButton(int index)
     {
         arrowIndex = index;
+
+        if (pastArrowIndex != arrowIndex)          // Checks if the arrow has changed index and plays sound effect if true
+        {
+            Instantiate(scroll);
+        }
     }
 
 

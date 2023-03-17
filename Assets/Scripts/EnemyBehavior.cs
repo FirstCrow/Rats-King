@@ -8,17 +8,26 @@ public class EnemyBehavior : DamageableEntity
     public float speed = 5f;                //Enemy move speed
     public float detectRadius = 1f;         //Enemy detection radius
     public GameObject player;
+    public AudioSource footstep;            //Footstep SFX prefab
+    private EnemyFootstepSFX footstepSFX;
+
 
     void Start()
     {
+        footstepSFX = new EnemyFootstepSFX(footstep);
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Vector2.Distance(transform.position, player.transform.position) < detectRadius)
+        if (Vector2.Distance(transform.position, player.transform.position) < detectRadius)
+        {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            footstepSFX.playFootsteps();
+        }
+        else
+            footstepSFX.stopFootsteps();
     }
 
 

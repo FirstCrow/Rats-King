@@ -225,6 +225,8 @@ MonoBehaviour:
   - {x: -479, y: -169}
   - {x: -442, y: -312}
   - {x: -395, y: -438}
+  scroll: {fileID: 2255551890495520469, guid: bf3c5082e667f8c47b95750c2366a165, type: 3}
+  select: {fileID: 4994489093193354403, guid: 6c2d20d82bba96a4988656c7ecd016ae, type: 3}
 --- !u!1 &493438689
 GameObject:
   m_ObjectHideFlags: 0

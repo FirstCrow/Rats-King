@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8579152299764955392}
   - component: {fileID: 8579152299764955404}
   - component: {fileID: 8579152299764955405}
+  - component: {fileID: 4971593586702241823}
   m_Layer: 0
   m_Name: tempEnemy
   m_TagString: Enemy
@@ -103,6 +104,7 @@ MonoBehaviour:
   speed: 2
   detectRadius: 10
   player: {fileID: 0}
+  footstep: {fileID: 5187124259893737072, guid: f6309ccbfe9ae184e8a0f9690356d756, type: 3}
 --- !u!58 &8579152299764955404
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -140,3 +142,15 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4971593586702241823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579152299764955393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81663353593f134d8b07c97369ee0d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
