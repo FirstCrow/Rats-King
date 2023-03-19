@@ -4,7 +4,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 
 
-public class EnemyBehavior : DamageableEntity
+public class HedgehogBehavior : DamageableEntity
 {
     public float speed = 5f;                //Enemy move speed
     public float detectRadius = 1f;         //Enemy detection radius

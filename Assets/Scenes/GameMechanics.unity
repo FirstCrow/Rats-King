@@ -5042,6 +5042,7 @@ MonoBehaviour:
   speed: 2
   detectRadius: 8
   player: {fileID: 494073453}
+  footstep: {fileID: 0}
 --- !u!212 &660030865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6837,6 +6838,7 @@ MonoBehaviour:
   speed: 2
   detectRadius: 8
   player: {fileID: 494073453}
+  footstep: {fileID: 0}
 --- !u!212 &1733830415
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8381,6 +8383,14 @@ PrefabInstance:
     - target: {fileID: 7736112552029799656, guid: 581b9e79c0de74e4993fff16a9a05957, type: 3}
       propertyPath: m_Name
       value: Destructible Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736112552029799668, guid: 581b9e79c0de74e4993fff16a9a05957, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 952b02cbfd87af74bb152e130575ad9f, type: 3}
+    - target: {fileID: 7736112552029799668, guid: 581b9e79c0de74e4993fff16a9a05957, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7736112552029799669, guid: 581b9e79c0de74e4993fff16a9a05957, type: 3}
       propertyPath: m_RootOrder
