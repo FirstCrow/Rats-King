@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 
@@ -8,13 +9,15 @@ public class EnemyBehavior : DamageableEntity
     public float speed = 5f;                //Enemy move speed
     public float detectRadius = 1f;         //Enemy detection radius
     public GameObject player;
-    public AudioSource footstep;            //Footstep SFX prefab
+    public GameObject footstep;            //Footstep SFX prefab
     private EnemyFootstepSFX footstepSFX;
+    private Transform parent;
 
 
     void Start()
     {
-        footstepSFX = new EnemyFootstepSFX(footstep);
+        parent = GetComponent<Transform>();
+        footstepSFX = new EnemyFootstepSFX(footstep, parent);
         player = GameObject.FindGameObjectWithTag("Player");
     }
 

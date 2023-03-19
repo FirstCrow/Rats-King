@@ -24,6 +24,8 @@ public class Melee : MonoBehaviour
         {
             HitObject.TakeDamage(damage);
             //hitbox.enabled = false;           //uncomment this line to make it only hit one enemy at a time
+
+            //HitObject.takeKnockback();
         }
         
     }

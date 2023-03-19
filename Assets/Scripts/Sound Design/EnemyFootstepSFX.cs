@@ -1,29 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyFootstepSFX : MonoBehaviour
 {
     private bool footstepsPlaying;
-    private AudioSource footstep;
-    private AudioSource thisFootstep;
+    private GameObject footstep;
     private Rigidbody2D rb;
     private Transform parent;
     private Object thisObject;
 
 
 
-    public EnemyFootstepSFX(AudioSource foot)
+    public EnemyFootstepSFX(GameObject foot, Transform parentObject)
     {
         footstep = foot;
+        parent = parentObject;
     }
 
     // Start is called before the first frame update
     void Start()
-    {
-        parent = GetComponent<Transform>();
-        footstep.loop = false;
+    {                                                                                                                                                                                                                                                                                                                                                                                                
         footstepsPlaying = false;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -41,7 +40,7 @@ public class EnemyFootstepSFX : MonoBehaviour
         if (footstepsPlaying == false)
         {
             footstepsPlaying = true;
-            thisObject = Instantiate(footstep);
+            thisObject = Instantiate(footstep, parent);
             Debug.Log("Footsteps Playing");
         }
     }
@@ -54,6 +53,11 @@ public class EnemyFootstepSFX : MonoBehaviour
             Destroy(thisObject);
             Debug.Log("Footsteps not Playing");
         }
+    }
+
+    public Object getSFX()
+    {
+        return thisObject;
     }
 
 }
