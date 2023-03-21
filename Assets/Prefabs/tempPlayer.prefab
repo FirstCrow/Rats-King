@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6733180650253901110}
   - component: {fileID: 6733180650253901098}
   - component: {fileID: 6733180650253901099}
-  - component: {fileID: 6733180650253901104}
   - component: {fileID: 8502893181917504067}
   m_Layer: 0
   m_Name: tempPlayer
@@ -161,6 +160,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 5
+  healthSlider: {fileID: 0}
+  healthText: {fileID: 0}
+  currentBlood: 100
+  bloodSlider: {fileID: 0}
   currentState: 0
   speed: 4
   rotationPoint: {fileID: 6733180651528418485}
@@ -168,25 +171,7 @@ MonoBehaviour:
   arrowCost: 20
   AllowDash: 1
   DashTime: 0.1
---- !u!114 &6733180650253901104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6733180650253901097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1845b4fa0c2e11d4e8398498916a946e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  healthSlider: {fileID: 0}
-  delaySlider: {fileID: 0}
-  delayDuration: 2
-  healthText: {fileID: 0}
-  maxBlood: 100
-  bloodSlider: {fileID: 0}
+  slashingSFX: {fileID: 0}
 --- !u!114 &8502893181917504067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstep: {fileID: 0}
-  rb: {fileID: 0}
 --- !u!1 &6733180650404955598
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WallSFX: {fileID: 1438079166992503674, guid: 7b2513da62bb4564487c9f7f12df810a, type: 3}
   EnemyHitSFX: {fileID: 2999544052859472349, guid: 7d6235472466af94a859d9dc6738b8be, type: 3}
+  WoodBreakingSFX: {fileID: 0}
 --- !u!1 &6733180651006608957
 GameObject:
   m_ObjectHideFlags: 0

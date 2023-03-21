@@ -8,14 +8,14 @@ using TMPro;
 //Using https://www.youtube.com/watch?v=BLfNP4Sc_iA as reference
 public class PlayerHealth : MonoBehaviour
 {
-    [Header ("Health")]                     //Tracks GUI regarding Player health
+    [Header("Health")]                     //Tracks GUI regarding Player health
     public int maxHealth = 100;
     private int currentHealth;
     public Slider healthSlider;             //Main slider to keep track of health
 
     public Slider delaySlider;              //A secondary slider to keep track of total damage taken (within a short time)
     public float delayDuration = 2f;
-    private float delayTimer = 0f;          
+    private float delayTimer = 0f;
     private float timer = 0f;
 
     public TextMeshProUGUI healthText;
@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         //Delay slider
-        if(delayTimer > 0)
+        if (delayTimer > 0)
         {
             delayTimer -= Time.deltaTime;
             timer = 0;
@@ -75,7 +75,7 @@ public class PlayerHealth : MonoBehaviour
         healthText.text = currentHealth + "/" + maxHealth;
 
         //Delay is instant when healing
-        if(health > delaySlider.value)
+        if (health > delaySlider.value)
         {
             delaySlider.value = health;
         }

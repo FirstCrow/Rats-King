@@ -1,9 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : DamageableEntity
 {
+    //Porting Player health information into here
+    [Header("Health")]                     //Tracks GUI regarding Player health
+    private float maxHealth;
+    public Slider healthSlider;             //Main slider to keep track of health
+    public TextMeshProUGUI healthText;
+    /*  Extra stuff that can be readded later if desired
+    public Slider delaySlider;              //A secondary slider to keep track of total damage taken (within a short time)
+    public float delayDuration = 2f;
+    private float delayTimer = 0f;
+    private float timer = 0f;
+    */
+
+
+
+
+    [Header("Special")]                     //Tracks GUI regarding Player Special Meter (Blood meter)
+    private int maxBlood;
+    public int currentBlood = 100;
+    public Slider bloodSlider;
+
+    [Header("Cheese")]
+    public int cheese = 0;
+    public TextMeshProUGUI cheeseText;
+
     public enum PlayerState
     {
         moving,
@@ -19,7 +45,7 @@ public class PlayerController : DamageableEntity
     public float speed = 10f;               //Player speed
     private Vector2 direction;              //Player direction (based on movement inputs [WASD])
     public GameObject rotationPoint;
-    private PlayerHealth playerHealth;
+    //private PlayerHealth playerHealth;
 
     [Header("Ranged Variables")]
     
@@ -42,13 +68,22 @@ public class PlayerController : DamageableEntity
 
     void Start()
     {
+        maxHealth = HP;
+        healthSlider.maxValue = HP;
+        healthSlider.value = HP;
+        healthText.text = HP + "/" + maxHealth;
+
+        maxBlood = currentBlood;
+        bloodSlider.maxValue = currentBlood;
+        bloodSlider.value = currentBlood;
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         clips = anim.runtimeAnimatorController.animationClips;
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         currentState = PlayerState.moving;
         rotationPoint.SetActive(false);
-        playerHealth = GetComponent<PlayerHealth>();
+        //playerHealth = GetComponent<PlayerHealth>();
         hitbox = GetComponent<Collider2D>();
     }
 
@@ -78,7 +113,7 @@ public class PlayerController : DamageableEntity
             }
 
             //Ranged Attack (Right Mouse)
-            if (Input.GetKeyDown(KeyCode.Mouse1) && playerHealth.GetBlood() >= arrowCost)           //Right Mouse (Hold) = Aim Ranged Attack
+            if (Input.GetKeyDown(KeyCode.Mouse1) && currentBlood >= arrowCost)           //Right Mouse (Hold) = Aim Ranged Attack
             {
                 Debug.Log("Ranged Button Pressed!");
                 direction = Vector2.zero;                   //Stops movement before aiming
@@ -130,7 +165,7 @@ public class PlayerController : DamageableEntity
                 float distance = 1.0f;
 
                 // Lowers blood meter when using arrow, prevents user from attacking after blood is out.
-                playerHealth.UseBlood(arrowCost);
+                UseBlood(arrowCost);
 
                 // Determine the direction based on the Quaternion identity
                 Vector3 direction = Quaternion.identity * Vector3.right;
@@ -236,4 +271,19 @@ public class PlayerController : DamageableEntity
         //I think the half second delay already accomplished that so I wont add it 
         AllowDash = true;
     }
+
+    public override void TakeDamage(float damage)
+    {
+        base.TakeDamage(damage);
+        healthSlider.value = HP;
+        healthText.text = HP + "/" + maxHealth;
+       
+    }
+
+    public void UseBlood(int blood)
+    {
+        currentBlood -= Mathf.Clamp(blood, 0, maxBlood);
+        bloodSlider.value = currentBlood;
+    }
+
 }
