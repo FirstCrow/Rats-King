@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class EnemyFootstepSFX : MonoBehaviour
 {
+
+    [Header("Enemy Footsteps")]
+
     private bool footstepsPlaying;
     private GameObject footstep;
     private Rigidbody2D rb;

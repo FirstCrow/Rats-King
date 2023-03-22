@@ -8,15 +8,17 @@ public class ShrewBehavior : DamageableEntity
     public float shootRadius;         //Range at which enemy starts shooting
     public float idealRange;            //Distance Shrew wants to keep player at
     public GameObject player;
-    public GameObject footstep;            //Footstep SFX prefab
-    //private EnemyFootstepSFX footstepSFX;
-    private Transform parent;
+
+    [Header("Enemy Footsteps")]
+
+    private bool footstepsPlaying;
+    private AudioSource footstep;
 
 
     void Start()
     {
-        parent = GetComponent<Transform>();
-        //footstepSFX = new EnemyFootstepSFX(footstep, parent);
+        footstep = GetComponent<AudioSource>();
+        footstep.loop = false;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -34,5 +36,29 @@ public class ShrewBehavior : DamageableEntity
             //probably can use an inverted form of movetowards
         }
 
+    }
+
+    public void playFootsteps()
+    {
+
+        if (footstepsPlaying == false)
+        {
+            footstepsPlaying = true;
+            footstep.loop = true;
+            footstep.Play();
+            Debug.Log("Footsteps Playing");
+        }
+    }
+
+
+    public void stopFootsteps()
+    {
+        if (footstepsPlaying == true)
+        {
+            footstepsPlaying = false;
+            footstep.loop = true;
+            footstep.Stop();
+            Debug.Log("Footsteps not Playing");
+        }
     }
 }

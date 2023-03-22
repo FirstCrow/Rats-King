@@ -5,7 +5,14 @@ using UnityEngine;
 public class Melee : MonoBehaviour
 {
     public float damage;
-    public Collider2D hitbox;
+    private Collider2D hitbox;
+
+
+    [Header("Sound Effect Prefabs")]
+
+    public GameObject WallSFX;
+    public GameObject EnemyHitSFX;
+    public GameObject WoodBreakingSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -14,9 +21,13 @@ public class Melee : MonoBehaviour
         hitbox = GetComponent<Collider2D>();
     }
 
-    //Applies damage to any game object that triggers it if the object is a damageable entity
+    // Detects when the hurtbox enters an object with a collider
+    //------------------------------------------------------------
     private void OnTriggerEnter2D(Collider2D other)
     {
+
+        // Applies damage to any game object that triggers it if the object is a damageable entity
+        // ------------------------------------------------------------------------------------------------------
         Debug.Log("Collider entered");
         DamageableEntity HitObject = other.GetComponent<DamageableEntity>();
         Debug.Log(other.gameObject.name);
@@ -27,6 +38,21 @@ public class Melee : MonoBehaviour
 
             //HitObject.takeKnockback();
         }
-        
+
+        // Uses the tag of the object collided with to determine what sound effect to play and then plays the correct SFX
+        // ----------------------------------------------------------------------------------------------------------------
+        if (other.tag == "Wall")
+        {
+            Instantiate(WallSFX);
+        }
+        else if (other.tag == "Enemy")
+        {
+            Instantiate(EnemyHitSFX);
+        }
+        else if (other.tag == "Wood")
+        {
+            Instantiate(WoodBreakingSFX);
+        }
+
     }
 }

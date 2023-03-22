@@ -5,7 +5,7 @@ using static PlayerController;
 
 public class FootstepFX : MonoBehaviour
 {
-
+    
     private bool footstepsPlaying;
     public AudioSource footstep;
     private Rigidbody2D rb;

@@ -9,15 +9,19 @@ public class HedgehogBehavior : DamageableEntity
     public float speed = 5f;                //Enemy move speed
     public float detectRadius = 1f;         //Enemy detection radius
     public GameObject player;
-    public GameObject footstep;            //Footstep SFX prefab
-    private EnemyFootstepSFX footstepSFX;
-    private Transform parent;
+    
+
+
+    [Header("Enemy Footsteps")]
+
+    private bool footstepsPlaying;
+    private AudioSource footstep;
 
 
     void Start()
     {
-        parent = GetComponent<Transform>();
-        footstepSFX = new EnemyFootstepSFX(footstep, parent);
+        footstep = GetComponent<AudioSource>();
+        footstep.loop = false;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -27,10 +31,10 @@ public class HedgehogBehavior : DamageableEntity
         if (Vector2.Distance(transform.position, player.transform.position) < detectRadius)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-            footstepSFX.playFootsteps();
+            playFootsteps();
         }
         else
-            footstepSFX.stopFootsteps();
+            stopFootsteps();
     }
 
 
@@ -43,4 +47,30 @@ public class HedgehogBehavior : DamageableEntity
     {
         enabled = false;
     }
+
+
+    public void playFootsteps()
+    {
+
+        if (footstepsPlaying == false)
+        {
+            footstepsPlaying = true;
+            footstep.loop = true;
+            footstep.Play();
+            Debug.Log("Footsteps Playing");
+        }
+    }
+
+
+    public void stopFootsteps()
+    {
+        if (footstepsPlaying == true)
+        {
+            footstepsPlaying = false;
+            footstep.loop = true;
+            footstep.Stop();
+            Debug.Log("Footsteps not Playing");
+        }
+    }
+
 }

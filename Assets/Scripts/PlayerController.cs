@@ -58,13 +58,18 @@ public class PlayerController : DamageableEntity
     public bool AllowDash = true;   //Used to only allow one dash at a time and to limit the use of dashes
     public float DashTime = .1f;
 
+
+    [Header("Sound Effect Prefabs")]
+    public AudioSource footstep;
+    private bool footstepsPlaying;
+    public GameObject slashingSFX;  //Variable to reference slashing sound effect
+
     Rigidbody2D rb;
     Collider2D hitbox;
     Animator anim;
     AnimationClip[] clips;          //Stores all animation clips (used to get animation lengths)
     Camera mainCam;
     Vector3 mousePos;
-    public GameObject slashingSFX;  //Variable to reference slashing sound effect
 
     void Start()
     {
@@ -85,6 +90,8 @@ public class PlayerController : DamageableEntity
         rotationPoint.SetActive(false);
         //playerHealth = GetComponent<PlayerHealth>();
         hitbox = GetComponent<Collider2D>();
+        footstep.loop = false;
+        footstepsPlaying = false;
     }
 
     void Update() 
@@ -204,6 +211,26 @@ public class PlayerController : DamageableEntity
         */
         anim.SetInteger("curState", (int)currentState);
         anim.SetBool("isMoving", Mathf.Abs(rb.velocity.x) > 0.1f || Mathf.Abs(rb.velocity.y) > 0.1f);
+
+
+
+
+        // Controls footstep SFX
+        //-------------------------
+
+        if (!footstepsPlaying && rb.velocity.magnitude != 0)
+        {
+            footstep.loop = true;
+            footstep.Play();
+            footstepsPlaying = true;
+        }
+
+        else if (footstepsPlaying && rb.velocity.magnitude == 0)
+        {
+            footstep.loop = false;
+            footstep.Stop();
+            footstepsPlaying = false;
+        }
 
     }
 
