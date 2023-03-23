@@ -14,6 +14,10 @@ public class Melee : MonoBehaviour
     public GameObject EnemyHitSFX;
     public GameObject WoodBreakingSFX;
 
+    [Header("Knockback Varibles")]
+    public float knockbackStrength = 8;
+    public float knockbackDelay = 0.15f;
+
     public GameObject MeleeVFX;
 
     // Start is called before the first frame update
@@ -40,6 +44,7 @@ public class Melee : MonoBehaviour
             //HitObject.takeKnockback();
         }
 
+
         // Uses the tag of the object collided with to determine what sound effect to play and then plays the correct SFX
         // ----------------------------------------------------------------------------------------------------------------
         if (other.tag == "Wall")
@@ -57,5 +62,27 @@ public class Melee : MonoBehaviour
             Instantiate(WoodBreakingSFX);
         }
 
+        // Uses tag of the object to apply knockback to enemies (Can be later updated to have different knockback values for each enemy)
+        //---------------------------------------------------------------------------------------------------------------------
+        if (other.tag == "Enemy")
+        {
+            Rigidbody2D enemy = other.GetComponent<Rigidbody2D>();  // Gets enemy game object
+            enemy.isKinematic = false;
+            Vector2 difference = other.transform.position - transform.position;
+            difference = difference.normalized * knockbackStrength;
+            enemy.AddForce(difference, ForceMode2D.Impulse);
+            enemy.isKinematic = true;
+            StartCoroutine(KnockbackCo(enemy));
+        }
+
+    }
+
+    // Adds a delay before the enemy can start walking towards the player again after knockback
+    //-------------------------------------------------------------------------------------------
+    private IEnumerator KnockbackCo(Rigidbody2D enemy)
+    {
+        yield return new WaitForSeconds(knockbackDelay);
+        enemy.velocity = Vector2.zero;
+        enemy.isKinematic = true;
     }
 }
