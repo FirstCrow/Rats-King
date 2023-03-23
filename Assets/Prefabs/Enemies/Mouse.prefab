@@ -142,7 +142,6 @@ MonoBehaviour:
   speed: 5
   attackRange: 0
   player: {fileID: 0}
-  footstep: {fileID: 0}
 --- !u!1 &8574962781232945157
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +153,7 @@ GameObject:
   - component: {fileID: 8574962781232945158}
   m_Layer: 0
   m_Name: Mouse
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

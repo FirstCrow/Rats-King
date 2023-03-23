@@ -11,19 +11,17 @@ public class Arrow : MonoBehaviour
     public GameObject arrowSFX;         //Arrow SFX prefab
     private float lifeTimeTimer = 0f;
 
-    private Camera mainCam;
     private Rigidbody2D rb;
-    private Vector3 mousePos;
+    private Vector3 playerPos;
 
     void Start()
     {
         lifeTimeTimer = lifeTime;
+        playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
 
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direction = mousePos - transform.position;
-        Vector3 rotation = transform.position - mousePos;
+        Vector3 rotation = playerPos - transform.position;
+        Vector3 direction = transform.position - playerPos;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * speed;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
@@ -43,11 +41,15 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collider entered");
-        DamageableEntity HitObject = other.GetComponent<DamageableEntity>();
-        if (HitObject != null) {
-            HitObject.TakeDamage(damage);
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log("Collider entered");
+            DamageableEntity HitObject = other.GetComponent<DamageableEntity>();
+            if (HitObject != null)
+            {
+                HitObject.TakeDamage(damage);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

@@ -14,6 +14,8 @@ public class Melee : MonoBehaviour
     public GameObject EnemyHitSFX;
     public GameObject WoodBreakingSFX;
 
+    public GameObject MeleeVFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,6 @@ public class Melee : MonoBehaviour
     //------------------------------------------------------------
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         // Applies damage to any game object that triggers it if the object is a damageable entity
         // ------------------------------------------------------------------------------------------------------
         Debug.Log("Collider entered");
@@ -48,6 +49,8 @@ public class Melee : MonoBehaviour
         else if (other.tag == "Enemy")
         {
             Instantiate(EnemyHitSFX);
+
+            Instantiate(MeleeVFX, this.transform.position, Quaternion.identity);
         }
         else if (other.tag == "Wood")
         {
