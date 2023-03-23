@@ -313,4 +313,12 @@ public class PlayerController : DamageableEntity
         bloodSlider.value = currentBlood;
     }
 
+    public void AddBlood(int blood)
+    {
+        currentBlood += blood;
+        if (currentBlood > maxBlood)
+            currentBlood = maxBlood;
+        bloodSlider.value = currentBlood;
+    }
+
 }

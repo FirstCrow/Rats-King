@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Melee : MonoBehaviour
 {
+    [Header("General Varibles")]
+
     public float damage;
+    public int bloodGainAmount = 20;
     private Collider2D hitbox;
+    private PlayerController player;
 
 
     [Header("Sound Effect Prefabs")]
@@ -25,6 +29,8 @@ public class Melee : MonoBehaviour
     {
         //Automatically pulls the collider
         hitbox = GetComponent<Collider2D>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>(); ;
+
     }
 
     // Detects when the hurtbox enters an object with a collider
@@ -41,12 +47,12 @@ public class Melee : MonoBehaviour
             if(HitObject.CompareTag("Enemy"))
             {
                 HitObject.TakeDamageAndKnockback(damage, knockbackStrength, knockbackDelay, this.transform);
+                player.AddBlood(bloodGainAmount);
             }
+
             else
                 HitObject.TakeDamage(damage);
             //hitbox.enabled = false;           //uncomment this line to make it only hit one enemy at a time
-
-            //HitObject.takeKnockback();
         }
 
 

@@ -126,4 +126,11 @@ public class PlayerHealth : MonoBehaviour
     {
         return currentBlood;
     }
+
+    public void AddBlood(int blood)
+    {
+        currentBlood += Mathf.Clamp(blood, 0, maxBlood);
+        SetBlood(currentBlood);
+        Debug.Log("Current Blood" + currentBlood);
+    }
 }
