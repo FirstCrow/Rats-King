@@ -11,6 +11,10 @@ public class Arrow : MonoBehaviour
     public GameObject arrowSFX;         //Arrow SFX prefab
     private float lifeTimeTimer = 0f;
 
+    [Header("Knockback Varibles")]
+    public float knockbackStrength;
+    public float knockbackDelay;
+
     private Rigidbody2D rb;
     private Vector3 playerPos;
 
@@ -41,15 +45,18 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.CompareTag("Enemy"))
         {
             Debug.Log("Collider entered");
             DamageableEntity HitObject = other.GetComponent<DamageableEntity>();
             if (HitObject != null)
             {
-                HitObject.TakeDamage(damage);
+                HitObject.TakeDamageAndKnockback(damage, knockbackStrength, knockbackDelay, this.transform);
             }
             Destroy(gameObject);
         }
+
     }
+
 }

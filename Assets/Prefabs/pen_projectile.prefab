@@ -171,3 +171,5 @@ MonoBehaviour:
   speed: 5
   lifeTime: 3
   arrowSFX: {fileID: 1700171136920089264, guid: 2a09989c497b03049af3182f05096fac, type: 3}
+  knockbackStrength: 10
+  knockbackDelay: 0.1
