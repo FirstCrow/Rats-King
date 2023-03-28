@@ -64,6 +64,9 @@ public class PlayerController : DamageableEntity
     private bool footstepsPlaying;
     public GameObject slashingSFX;  //Variable to reference slashing sound effect
 
+    [Header("VFX Effects")]
+    public ParticleSystem dust;
+
     Rigidbody2D rb;
     Collider2D hitbox;
     Animator anim;
@@ -134,6 +137,7 @@ public class PlayerController : DamageableEntity
                 Debug.Log("Dash Button Pressed!");
                 currentState = PlayerState.dashing;
             }
+
         }
 
         //-----DASHING STATE-----
@@ -210,12 +214,10 @@ public class PlayerController : DamageableEntity
          * 5 = dead
         */
         anim.SetInteger("curState", (int)currentState);
-        anim.SetBool("isMoving", Mathf.Abs(rb.velocity.x) > 0.1f || Mathf.Abs(rb.velocity.y) > 0.1f);
+        anim.SetBool("isMoving", rb.velocity.magnitude != 0);
 
 
-
-
-        // Controls footstep SFX
+        // Controls footstep SFX and VFX
         //-------------------------
 
         if (!footstepsPlaying && rb.velocity.magnitude != 0)
@@ -223,6 +225,7 @@ public class PlayerController : DamageableEntity
             footstep.loop = true;
             footstep.Play();
             footstepsPlaying = true;
+            dust.Play();
         }
 
         else if (footstepsPlaying && rb.velocity.magnitude == 0)
@@ -230,6 +233,7 @@ public class PlayerController : DamageableEntity
             footstep.loop = false;
             footstep.Stop();
             footstepsPlaying = false;
+            dust.Stop();
         }
 
     }
