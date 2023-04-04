@@ -74,6 +74,8 @@ public class PlayerController : DamageableEntity
     Camera mainCam;
     Vector3 mousePos;
 
+    private bool healing = false;
+    private float healingTime = 0;
     void Start()
     {
         maxHealth = HP;
@@ -103,6 +105,40 @@ public class PlayerController : DamageableEntity
         //Player movement
         if(currentState == PlayerState.moving)
         {
+
+            if (Input.GetKeyDown(KeyCode.R) && healingTime == 0f && HP < maxHealth && currentBlood >= 10)   //Starting to heal
+            {
+                healingTime = 0.01f;
+                healing = true;
+                //animate
+            }
+            if (Input.GetKeyUp(KeyCode.R) && healing)   //Stop healing
+            {
+                healingTime = 0;
+                healing = false;
+                //animate
+            }
+            if (healingTime > 0)    //In process of Healing
+            {
+                healingTime += Time.deltaTime;
+                if (healingTime >= 2.0f && healing) //2 is the current time it takes to heal
+                {
+                    if (HP < maxHealth && currentBlood >= 10) {
+                        TakeDamage(-1);
+                        UseBlood(10);
+                    }
+                    healing = false;
+
+                    if (Input.GetKey(KeyCode.R))
+                    {
+                        //animate
+                        healingTime = 0.01f;
+                        healing = true; ;
+                    }
+                }
+                
+            }
+
             direction.x = Input.GetAxisRaw("Horizontal");   //Get Horizontal Inputs (A or D | Left or Right)
             direction.y = Input.GetAxisRaw("Vertical");     //Get Vertical Inputs (W or S | Up or Down)
 

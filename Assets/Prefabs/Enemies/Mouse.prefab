@@ -136,11 +136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ef5a5dd61b5ee4ab87ceae669d6427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cheeseDrops: {fileID: 0}
-  maxCheese: 0
+  cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
+  maxCheese: 2
   HP: 1
   speed: 5
-  attackRange: 0
+  attackRange: 1.5
   player: {fileID: 0}
 --- !u!1 &8574962781232945157
 GameObject:

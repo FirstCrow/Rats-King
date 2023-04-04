@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class ShrewBehavior : DamageableEntity
 {
-    public float speed = 5f;                //Enemy move speed
+    public float speed;                //Enemy move speed
+    public float shootSpeed;       //Time between shots
     public float shootRadius;         //Range at which enemy starts shooting
     public float idealRange;            //Distance Shrew wants to keep player at
     public GameObject player;
 
-    [Header("Enemy Footsteps")]
+    public GameObject Knife;
 
-    private bool footstepsPlaying;
-    private AudioSource footstep;
+    //[Header("Enemy Footsteps")]
 
+    //private bool footstepsPlaying;
+    //private AudioSource footstep;
+    private float shootTimer = 0;
 
     void Start()
     {
-        footstep = GetComponent<AudioSource>();
-        footstep.loop = false;
+        //footstep = GetComponent<AudioSource>();
+        //footstep.loop = false;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -27,18 +30,33 @@ public class ShrewBehavior : DamageableEntity
     {
         if (Vector2.Distance(transform.position, player.transform.position) < shootRadius)
         {
-            //Shrew should start shooting towards player
+            shootTimer += Time.deltaTime;
+            if (shootTimer > shootSpeed) {
+                Debug.Log("Shooting");
+                //Shrew should start shooting towards player
+                Vector3 dir = player.transform.position - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                //Quaternion rotation = Quaternion.Euler(0, 0, angle);
+                //transform.rotation = rotation;
+
+                GameObject FiredProjectileObject = Instantiate(Knife, transform.position + Quaternion.Euler(0, 0, angle) * new Vector3(1.5f, 0, 0),
+                                                Quaternion.Euler(0, 0, angle));
+                shootTimer = 0;
+            }
             
         }
 
-        if (Vector2.Distance(transform.position, player.transform.position) < idealRange) { 
+        if (Vector2.Distance(transform.position, player.transform.position) < idealRange) {
+            Debug.Log("Retreating");
+
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, -speed * Time.deltaTime);
             //shrew should start backing away
             //probably can use an inverted form of movetowards
         }
 
     }
 
-    public void playFootsteps()
+    /*public void playFootsteps()
     {
 
         if (footstepsPlaying == false)
@@ -60,5 +78,5 @@ public class ShrewBehavior : DamageableEntity
             footstep.Stop();
             Debug.Log("Footsteps not Playing");
         }
-    }
+    }*/
 }

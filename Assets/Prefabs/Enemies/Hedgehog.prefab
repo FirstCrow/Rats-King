@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8579152299764955394}
   - component: {fileID: 8579152299764955395}
+  - component: {fileID: 8579152299764955392}
   - component: {fileID: 1799867092793282005}
   - component: {fileID: 8579152299764955405}
   - component: {fileID: 7570509371580963439}
   - component: {fileID: 2537181636132453814}
-  - component: {fileID: 8579152299764955392}
   m_Layer: 0
   m_Name: Hedgehog
   m_TagString: Enemy
@@ -89,6 +89,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8579152299764955392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579152299764955393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035136fddca28364cb8c64cae9040f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
+  maxCheese: 2
+  HP: 4
+  speed: 2
+  detectRadius: 10
+  attackRange: 2
+  player: {fileID: 0}
 --- !u!61 &1799867092793282005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,7 +142,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8579152299764955393}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -252,21 +271,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8579152299764955392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8579152299764955393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 035136fddca28364cb8c64cae9040f2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
-  maxCheese: 2
-  HP: 4
-  speed: 2
-  detectRadius: 10
-  player: {fileID: 0}

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class MouseBehavior : DamageableEntity
 {
-    public float speed = 5f;                //Enemy move speed
+    public float speed;                //Enemy move speed
 
     public float attackRange;            //Distance mouse can attack at
+    private float attackTimer;
+    private bool attacking;
     public GameObject player;
 
 
@@ -17,26 +19,38 @@ public class MouseBehavior : DamageableEntity
 
     void Start()
     {
-        footstep = GetComponent<AudioSource>();
-        footstep.loop = false;
+        //footstep = GetComponent<AudioSource>();
+        //footstep.loop = false;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, player.transform.position) < attackRange)
+        if (attacking)
         {
-            //mouse starts attacking
+            attackTimer -= Time.deltaTime;
+
+            if (attackTimer <= 0)
+            {
+                Debug.Log("Hedgehog finished Attacking");
+                attacking = false;
+            }
         }
-        else { 
-            //Move towards player
-
-
-
+        else if (Vector2.Distance(transform.position, player.transform.position) < attackRange)
+        {
+            //get attack animation length
+            attackTimer = .5f;
+            Debug.Log("Hedgehog Attacking");
+            //play attack animation
+            attacking = true;
         }
-
- 
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            //playFootsteps();
+        }
+        
     }
 
 
