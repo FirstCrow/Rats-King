@@ -5109,25 +5109,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2115684564}
     m_Modifications:
-    - target: {fileID: 1799867092793282005, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5762380872808657838, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570509371580963439, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5711c32ef2039b1498b6a94b0050bebd, type: 2}
     - target: {fileID: 8579152299764955393, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
       propertyPath: m_Name
       value: Hedgehog (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8579152299764955393, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8579152299764955394, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
       propertyPath: m_RootOrder
@@ -5624,10 +5608,6 @@ PrefabInstance:
     - target: {fileID: 8579152299764955394, guid: af74a93607d5e864b898c03b954664cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8579152299764955404, guid: af74a93607d5e864b898c03b954664cb, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af74a93607d5e864b898c03b954664cb, type: 3}
@@ -8597,7 +8577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6733180650404955598, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6733180651006608957, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_Layer
