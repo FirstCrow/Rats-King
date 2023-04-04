@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3114277807377445818}
   - component: {fileID: 7448072629791334238}
   - component: {fileID: 8937141809730016512}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hurtbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 8579152299764955405}
   - component: {fileID: 7570509371580963439}
   - component: {fileID: 2537181636132453814}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hedgehog
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.035466433, y: 0.08157301}

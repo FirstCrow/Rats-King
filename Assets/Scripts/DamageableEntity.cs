@@ -43,11 +43,11 @@ public class DamageableEntity : MonoBehaviour
     {
        
             Rigidbody2D enemy = GetComponent<Rigidbody2D>();  // Gets enemy game object
-            enemy.isKinematic = false;
+            //enemy.isKinematic = false;
             Vector2 difference = transform.position - source.position;
             difference = difference.normalized * knockbackStrength;
             enemy.AddForce(difference, ForceMode2D.Impulse);
-            enemy.isKinematic = true;
+            //enemy.isKinematic = true;
             StartCoroutine(KnockbackCo(enemy, knockbackDelay));
     }
 
@@ -57,7 +57,7 @@ public class DamageableEntity : MonoBehaviour
     {
         yield return new WaitForSeconds(knockbackDelay);
         enemy.velocity = Vector2.zero;
-        enemy.isKinematic = true;
+        //enemy.isKinematic = true;
     }
 
 }

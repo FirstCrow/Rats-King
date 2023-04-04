@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8579152299764955404}
   - component: {fileID: 8579152299764955405}
   - component: {fileID: -8139066723931850094}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shrew
   m_TagString: Enemy
   m_Icon: {fileID: 0}
