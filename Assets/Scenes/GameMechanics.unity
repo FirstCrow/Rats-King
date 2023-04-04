@@ -5109,6 +5109,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2115684564}
     m_Modifications:
+    - target: {fileID: 7570509371580963439, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5711c32ef2039b1498b6a94b0050bebd, type: 2}
     - target: {fileID: 8579152299764955393, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
       propertyPath: m_Name
       value: Hedgehog (3)
@@ -8458,6 +8462,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3884369811348444238, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 181.09912
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884369811348444238, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -41.045044
+      objectReference: {fileID: 0}
     - target: {fileID: 4598426927522289001, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
       propertyPath: m_Name
       value: Cheese Text
@@ -8507,17 +8519,21 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1090897965}
+    - target: {fileID: 6733180650253901108, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6733180650253901109, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6733180650253901109, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.49
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 6733180650253901109, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.13
+      value: -3.93
       objectReference: {fileID: 0}
     - target: {fileID: 6733180650253901109, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8633,6 +8649,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1722166087977816034, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062049429424901968, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 494073453}
+    - target: {fileID: 2062049429424901979, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741625669823517779, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741625669823517779, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741625669823517779, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997156333014712066, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
+      propertyPath: m_Color.a
+      value: 0.4392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997156333014712066, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8574962781232945157, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
       propertyPath: m_Name
       value: Mouse
@@ -8643,11 +8691,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8574962781232945158, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9484649
+      value: 4.33
       objectReference: {fileID: 0}
     - target: {fileID: 8574962781232945158, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7389617
+      value: 1.53
       objectReference: {fileID: 0}
     - target: {fileID: 8574962781232945158, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
       propertyPath: m_LocalPosition.z

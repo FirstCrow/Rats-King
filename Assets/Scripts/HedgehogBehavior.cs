@@ -12,13 +12,15 @@ public class HedgehogBehavior : DamageableEntity
     private float attackTimer;
     private bool attacking;
     public GameObject player;
-    
+    private int direction;
+    private float scale;
 
 
     [Header("Enemy Footsteps")]
 
     private bool footstepsPlaying;
     private AudioSource footstep;
+    private Animator anim;
 
 
     void Start()
@@ -26,6 +28,9 @@ public class HedgehogBehavior : DamageableEntity
         footstep = GetComponent<AudioSource>();
         footstep.loop = false;
         player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
+
+        scale = transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -51,10 +56,17 @@ public class HedgehogBehavior : DamageableEntity
         else if (Vector2.Distance(transform.position, player.transform.position) < detectRadius)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            direction = (transform.position.x > player.transform.position.x) ? 1 : -1;  //Enemy faces towards player when moving
             playFootsteps();
         }
         else
             stopFootsteps();
+
+        transform.localScale = new Vector2(scale * direction, scale);   //Determines which direction enemy faces
+
+        //Animations
+        anim.SetBool("attacking", attacking);
+        anim.SetBool("moving", !attacking && Vector2.Distance(transform.position, player.transform.position) < detectRadius);
     }
 
 
