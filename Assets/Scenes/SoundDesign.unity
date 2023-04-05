@@ -8478,7 +8478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7736112552029799656, guid: 581b9e79c0de74e4993fff16a9a05957, type: 3}
       propertyPath: m_TagString
-      value: Wood
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 7736112552029799668, guid: 581b9e79c0de74e4993fff16a9a05957, type: 3}
       propertyPath: m_Sprite
