@@ -30,6 +30,7 @@ public class HedgehogBehavior : DamageableEntity
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
 
+        direction = 1;
         scale = transform.localScale.x;
     }
 

@@ -27,6 +27,7 @@ public class MouseBehavior : DamageableEntity
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
 
+        direction = 1;
         scale = transform.localScale.x;
     }
 
