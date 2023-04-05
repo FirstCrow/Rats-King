@@ -5000,6 +5000,7 @@ MonoBehaviour:
   DashTime: 0.1
   footstep: {fileID: 1280620940734743104}
   slashingSFX: {fileID: 8540823321486288979, guid: f7c208b327ba19a4c9b3084eeb26396a, type: 3}
+  dashSFX: {fileID: 2250256050902311756, guid: 19004458fd06e4c00a178c82dafecd98, type: 3}
   dust: {fileID: 1984498763}
 --- !u!1 &6733180650404955598
 GameObject:

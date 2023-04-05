@@ -63,6 +63,7 @@ public class PlayerController : DamageableEntity
     public AudioSource footstep;
     private bool footstepsPlaying;
     public GameObject slashingSFX;  //Variable to reference slashing sound effect
+    public AudioSource dashSFX; 
 
     [Header("VFX Effects")]
     public ParticleSystem dust;
@@ -182,6 +183,7 @@ public class PlayerController : DamageableEntity
         {
             if (AllowDash) {
                 StartCoroutine(Dash());
+                Instantiate(dashSFX);  
             }
         }
 
