@@ -8454,18 +8454,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3884369811348444238, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 181.09912
-      objectReference: {fileID: 0}
-    - target: {fileID: 3884369811348444238, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -41.045044
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598426927522289001, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_Name
-      value: Cheese Text
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
 --- !u!1001 &6733180650735020868

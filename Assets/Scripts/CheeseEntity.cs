@@ -29,7 +29,7 @@ public class CheeseEntity : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             player.cheese++;
-            player.cheeseText.text = "Cheese " + player.cheese;
+            player.cheeseText.text = "" + player.cheese;
             Destroy(gameObject);
         }
 
