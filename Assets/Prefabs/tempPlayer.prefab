@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1984498761}
   - component: {fileID: 1984498763}
   - component: {fileID: 1984498762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4826,7 +4826,7 @@ GameObject:
   - component: {fileID: 3603281924071749421}
   - component: {fileID: 6733180650253901098}
   - component: {fileID: 6733180650253901099}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tempPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4998,6 +4998,7 @@ MonoBehaviour:
   arrowCost: 20
   AllowDash: 1
   DashTime: 0.1
+  dashVFX: {fileID: 7187306465890056340, guid: bd7f9fca6fd76834e8704da305992ec3, type: 3}
   footstep: {fileID: 1280620940734743104}
   slashingSFX: {fileID: 8540823321486288979, guid: f7c208b327ba19a4c9b3084eeb26396a, type: 3}
   dashSFX: {fileID: 2250256050902311756, guid: 19004458fd06e4c00a178c82dafecd98, type: 3}
@@ -5144,7 +5145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6733180651006608958}
   - component: {fileID: 6733180651006608959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VisualizeRotation (Only for DEBUG)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5227,7 +5228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6733180651528418486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RotationPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5305,6 +5306,10 @@ PrefabInstance:
     - target: {fileID: 7547635384756435149, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}
       propertyPath: m_Name
       value: Footstep SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547635384756435149, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}

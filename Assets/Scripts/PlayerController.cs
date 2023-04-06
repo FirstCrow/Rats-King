@@ -57,7 +57,7 @@ public class PlayerController : DamageableEntity
 
     public bool AllowDash = true;   //Used to only allow one dash at a time and to limit the use of dashes
     public float DashTime = .1f;
-
+    public GameObject dashVFX;
 
     [Header("Sound Effect Prefabs")]
     public AudioSource footstep;
@@ -325,7 +325,17 @@ public class PlayerController : DamageableEntity
         
         speed *= 9;     //Because of fixed update I can't just set a temp speed here, I have to change the speed thats being called every update
         //Speed and Dashtime are used to determine the distance the player will travel in the dash, I thought .1 seconds at a speed of 9 looked nice
-        yield return new WaitForSeconds(DashTime);
+
+        //Dash VFX (plays three times)
+        GameObject dashVFX = Instantiate(this.dashVFX, transform.position, Quaternion.identity);
+        dashVFX.GetComponent<DashVFX>().GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
+        yield return new WaitForSeconds(DashTime / 3);
+        dashVFX = Instantiate(this.dashVFX, transform.position, Quaternion.identity);
+        dashVFX.GetComponent<DashVFX>().GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
+        yield return new WaitForSeconds(DashTime / 3);
+        dashVFX = Instantiate(this.dashVFX, transform.position, Quaternion.identity);
+        dashVFX.GetComponent<DashVFX>().GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
+        yield return new WaitForSeconds(DashTime / 3);
         
         hitbox.enabled = true;
         speed = 0;

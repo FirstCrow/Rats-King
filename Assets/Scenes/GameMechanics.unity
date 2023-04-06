@@ -5164,17 +5164,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8579152299764955394, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
   m_PrefabInstance: {fileID: 746960508}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &825639980 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3884369810542254158, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-  m_PrefabInstance: {fileID: 3884369810257681506}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!213 &827635642
 Sprite:
   m_ObjectHideFlags: 0
@@ -8463,21 +8452,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1984498760, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280620940734743105, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6733180650253901097, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_Name
       value: tempPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733180650253901097, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6733180650253901099, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: cheeseText
@@ -8495,26 +8472,6 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1090897965}
-    - target: {fileID: 6733180650253901104, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: healthText
-      value: 
-      objectReference: {fileID: 1124894461}
-    - target: {fileID: 6733180650253901104, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: bloodSlider
-      value: 
-      objectReference: {fileID: 1047781615}
-    - target: {fileID: 6733180650253901104, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: delaySlider
-      value: 
-      objectReference: {fileID: 825639980}
-    - target: {fileID: 6733180650253901104, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 1090897965}
-    - target: {fileID: 6733180650253901108, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6733180650253901109, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -8559,26 +8516,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6733180650253901110, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733180650404955598, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733180651006608957, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733180651528418485, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502893181917504067, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: footstep
-      value: 
-      objectReference: {fileID: 7547635384756435148, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
 --- !u!1001 &7736112552513365254
