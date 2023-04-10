@@ -108191,7 +108191,7 @@ Tilemap:
       - {fileID: 1326006636, guid: c7375ade6f8054642837a4cbfde703f9, type: 3}
       - {fileID: -534014207, guid: c7375ade6f8054642837a4cbfde703f9, type: 3}
       - {fileID: 12228171, guid: c7375ade6f8054642837a4cbfde703f9, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -4, y: -14, z: 0}
@@ -108545,11 +108545,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1799867092793282005, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.5625
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1799867092793282005, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.9375
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8579152299764955392, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
       propertyPath: HP

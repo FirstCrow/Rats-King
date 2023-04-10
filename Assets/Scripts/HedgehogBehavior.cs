@@ -14,6 +14,7 @@ public class HedgehogBehavior : DamageableEntity
     public GameObject player;
     private int direction;
     private float scale;
+    public ParticleSystem dust;
 
 
     [Header("Enemy Footsteps")]
@@ -106,4 +107,8 @@ public class HedgehogBehavior : DamageableEntity
         }
     }
 
+    public void PlayDust()
+    {
+        dust.Play();
+    }
 }

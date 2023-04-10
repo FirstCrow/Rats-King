@@ -5109,6 +5109,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2115684564}
     m_Modifications:
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: ForceModule.y.scalar
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: VelocityModule.inWorldSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799867092793282005, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2906721
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799867092793282005, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8119521
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799867092793282005, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.035466433
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799867092793282005, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.08157301
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799867092793282005, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799867092793282005, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114277807377445818, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114277807377445818, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114277807377445818, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114277807377445818, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8579152299764955393, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
       propertyPath: m_Name
       value: Hedgehog (3)
