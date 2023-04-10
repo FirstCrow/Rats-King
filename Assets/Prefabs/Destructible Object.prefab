@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 7736112552029799657}
   m_Layer: 0
   m_Name: Destructible Object
-  m_TagString: Wall
+  m_TagString: Breakable Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

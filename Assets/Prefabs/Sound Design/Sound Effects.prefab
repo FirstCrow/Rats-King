@@ -84,6 +84,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2629294240885434098, guid: 68393a964fec3944a97070ff076d92a4, type: 3}
+      propertyPath: Priority
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629294240885434098, guid: 68393a964fec3944a97070ff076d92a4, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629294240885434098, guid: 68393a964fec3944a97070ff076d92a4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a454b35d3626d8a468391218e51068f7, type: 3}
     - target: {fileID: 2629294240885434099, guid: 68393a964fec3944a97070ff076d92a4, type: 3}
       propertyPath: m_Name
       value: BackgroundMusic
@@ -150,6 +162,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ambience
       objectReference: {fileID: 0}
+    - target: {fileID: 4310003026142305129, guid: e3d93c8389c2d504eb64f125de4a1713, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310003026142305129, guid: e3d93c8389c2d504eb64f125de4a1713, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a454b35d3626d8a468391218e51068f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d93c8389c2d504eb64f125de4a1713, type: 3}
 --- !u!4 &212793116260412090 stripped

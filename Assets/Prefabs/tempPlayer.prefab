@@ -5132,6 +5132,7 @@ MonoBehaviour:
   WallSFX: {fileID: 1438079166992503674, guid: 7b2513da62bb4564487c9f7f12df810a, type: 3}
   EnemyHitSFX: {fileID: 2999544052859472349, guid: 7d6235472466af94a859d9dc6738b8be, type: 3}
   WoodBreakingSFX: {fileID: 3023322215524476070, guid: 82f7dc3ac2686944f880c23b91643d5a, type: 3}
+  BreakableWallSFX: {fileID: 1066689499222200805, guid: e092ed57a5ce0a94ba26a176ccb71f1a, type: 3}
   knockbackStrength: 10
   knockbackDelay: 0.15
   MeleeVFX: {fileID: 4128427843519675879, guid: c5cb0bc8d55e6b24c961533d208f852b, type: 3}
@@ -5302,6 +5303,18 @@ PrefabInstance:
     - target: {fileID: 7547635384756435147, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547635384756435148, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547635384756435148, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a0148e634e80ed845989551460b90038, type: 3}
+    - target: {fileID: 7547635384756435148, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7547635384756435149, guid: 5ec0a34b33c19d441843a3122db6382f, type: 3}
       propertyPath: m_Name

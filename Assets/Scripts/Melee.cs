@@ -17,6 +17,7 @@ public class Melee : MonoBehaviour
     public GameObject WallSFX;
     public GameObject EnemyHitSFX;
     public GameObject WoodBreakingSFX;
+    public GameObject BreakableWallSFX;
 
     [Header("Knockback Varibles")]
     public float knockbackStrength = 8;
@@ -72,6 +73,10 @@ public class Melee : MonoBehaviour
         {
             Instantiate(WoodBreakingSFX);
         }
- 
+        else if (other.tag == "Breakable Wall")
+        {
+            Instantiate(BreakableWallSFX);
+        }
+
     }
 }
