@@ -8576,6 +8576,10 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1090897965}
+    - target: {fileID: 6733180650253901108, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6733180650253901109, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_RootOrder
       value: 2
