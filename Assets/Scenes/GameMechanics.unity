@@ -5614,6 +5614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8139066723931850094, guid: af74a93607d5e864b898c03b954664cb, type: 3}
+      propertyPath: knifeRotationOffset
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 8579152299764955393, guid: af74a93607d5e864b898c03b954664cb, type: 3}
       propertyPath: m_Name
       value: Shrew
@@ -7242,6 +7246,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2115684564}
     m_Modifications:
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: NoiseModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: NoiseModule.quality
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: NoiseModule.frequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: NoiseModule.separateAxes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: NoiseModule.sizeAmount.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: NoiseModule.rotationAmount.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14345478, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8579152299764955393, guid: 93be6d5cfab37b249ac58b22530502b0, type: 3}
       propertyPath: m_Name
       value: Hedgehog (2)

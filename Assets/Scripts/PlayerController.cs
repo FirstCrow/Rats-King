@@ -70,6 +70,7 @@ public class PlayerController : DamageableEntity
 
     [Header("VFX Effects")]
     public ParticleSystem dust;
+    public ParticleSystem healVFX;
 
     Rigidbody2D rb;
     Collider2D hitbox;
@@ -115,12 +116,17 @@ public class PlayerController : DamageableEntity
                 healingTime = 0.01f;
                 healing = true;
                 //animate
+
+                //Healing VFX
+                healVFX.Play();
             }
             if (Input.GetKeyUp(KeyCode.R) && healing)   //Stop healing
             {
                 healingTime = 0;
                 healing = false;
                 //animate
+
+                healVFX.Stop();
             }
             if (healingTime > 0)    //In process of Healing
             {
@@ -130,6 +136,8 @@ public class PlayerController : DamageableEntity
                     if (HP < maxHealth && currentBlood >= 10) {
                         TakeDamage(-1);
                         UseBlood(10);
+
+                        healVFX.Stop();
                     }
                     healing = false;
 
@@ -137,7 +145,7 @@ public class PlayerController : DamageableEntity
                     {
                         //animate
                         healingTime = 0.01f;
-                        healing = true; ;
+                        healing = true;
                     }
                 }
                 
