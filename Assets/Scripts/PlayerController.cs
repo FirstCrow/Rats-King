@@ -43,8 +43,11 @@ public class PlayerController : DamageableEntity
 
     [Header("Main Variables")]
     public float speed = 10f;               //Player speed
+    public int dashSpeed = 10;
     private Vector2 direction;              //Player direction (based on movement inputs [WASD])
     public GameObject rotationPoint;
+    public float dashDelay = 0.1f;
+
     //private PlayerHealth playerHealth;
 
     [Header("Ranged Variables")]
@@ -323,7 +326,7 @@ public class PlayerController : DamageableEntity
         float baseSpeed = speed;    //Saves the original speed 
         
         
-        speed *= 9;     //Because of fixed update I can't just set a temp speed here, I have to change the speed thats being called every update
+        speed *= dashSpeed;     //Because of fixed update I can't just set a temp speed here, I have to change the speed thats being called every update
         //Speed and Dashtime are used to determine the distance the player will travel in the dash, I thought .1 seconds at a speed of 9 looked nice
 
         //Dash VFX (plays three times)
@@ -340,7 +343,7 @@ public class PlayerController : DamageableEntity
         hitbox.enabled = true;
         speed = 0;
 
-        yield return new WaitForSeconds(.5f);   //Creates a delay after the dash where the player can be hit and they cant move
+        yield return new WaitForSeconds(dashDelay);   //Creates a delay after the dash where the player can be hit and they cant move
 
         //Returns control and normal speed back to the player
         speed = baseSpeed;
