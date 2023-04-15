@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8696e78fb70b1e94ebe8b26c50c010ad
+guid: 9e32617d8dba94a45a3ad9247e8a806b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,12 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Billy_Idle_Animation_0
+      name: billy_pen_vfx_new_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,19 +131,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26d81d1806a71834e8fe7becd74b2cf5
-      internalID: 24995281
+      spriteID: 5d84e955c8471bc49964dd06739c5f91
+      internalID: -404692329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Billy_Idle_Animation_1
+      name: billy_pen_vfx_new_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
-        width: 32
+        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,40 +152,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7db8d5c51eb779a4da3c8fdd8a01cfbe
-      internalID: -431101493
+      spriteID: a79704c0ff8e5494d863d93e11bb29e1
+      internalID: -945214715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Billy_Idle_Animation_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 969d9558852d3d04abe8768bd8e2f65b
-      internalID: -1139658502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Billy_Idle_Animation_3
+      name: billy_pen_vfx_new_2
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
+        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,19 +173,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 264cbda5d5055f045a5eba96d3c5d374
-      internalID: -926000645
+      spriteID: ce61eb8c68a78f64384b8ef14384b19c
+      internalID: 1518649417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Billy_Idle_Animation_4
+      name: billy_pen_vfx_new_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 0
-        width: 32
+        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,40 +194,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33d62ca4f17ccde48a0b61ef35517e0e
-      internalID: 645536147
+      spriteID: f85e55c4acc7ce849a4b0f782861f4d3
+      internalID: -296479954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Billy_Idle_Animation_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a05d9b10fac5f348aa6c2699b3a20e0
-      internalID: 2128659803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Billy_Idle_Animation_6
+      name: billy_pen_vfx_new_4
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
+        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -257,19 +215,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7e3672723984fe448ae8f4d9c3dfcec
-      internalID: 884369277
+      spriteID: 7ca494fe1ac806345adbe57564f2af73
+      internalID: 396979117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Billy_Idle_Animation_7
+      name: billy_pen_vfx_new_5
       rect:
         serializedVersion: 2
-        x: 224
+        x: 240
         y: 0
-        width: 32
+        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -278,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c784523958586c840a1a8844fb6d8a61
-      internalID: -1624941778
+      spriteID: 76314568d3397854696b0d4602f35485
+      internalID: -622540456
       vertices: []
       indices: 
       edges: []
@@ -295,14 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Billy_Idle_Animation_0: 24995281
-      Billy_Idle_Animation_1: -431101493
-      Billy_Idle_Animation_2: -1139658502
-      Billy_Idle_Animation_3: -926000645
-      Billy_Idle_Animation_4: 645536147
-      Billy_Idle_Animation_5: 2128659803
-      Billy_Idle_Animation_6: 884369277
-      Billy_Idle_Animation_7: -1624941778
+      billy_pen_vfx_new_0: -404692329
+      billy_pen_vfx_new_1: -945214715
+      billy_pen_vfx_new_2: 1518649417
+      billy_pen_vfx_new_3: -296479954
+      billy_pen_vfx_new_4: 396979117
+      billy_pen_vfx_new_5: -622540456
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
