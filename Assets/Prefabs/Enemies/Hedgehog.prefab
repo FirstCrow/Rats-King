@@ -5030,7 +5030,7 @@ MonoBehaviour:
   maxCheese: 2
   HP: 4
   speed: 2
-  detectRadius: 10
+  detectRadius: 5
   attackRange: 3
   player: {fileID: 6733180650253901097, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
   dust: {fileID: 14345478}

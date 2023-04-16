@@ -9796,7 +9796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee63ef08ec8d7e47bf6cd7b8ab06c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cheeseDrops: {fileID: 0}
+  cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
   maxCheese: 0
   HP: 5
   healthSlider: {fileID: 0}
@@ -9809,7 +9809,7 @@ MonoBehaviour:
   speed: 4
   dashSpeed: 10
   rotationPoint: {fileID: 6733180651528418485}
-  dashDelay: 0.1
+  dashDelay: 0
   arrow: {fileID: 2307157540231039870, guid: 17249882aaad3334ebc2fdaceefbc0a4, type: 3}
   arrowCost: 20
   AllowDash: 1
