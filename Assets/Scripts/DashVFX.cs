@@ -11,6 +11,7 @@ public class DashVFX : MonoBehaviour
     void Start()
     {
         spriteRend = GetComponent<SpriteRenderer>();
+        spriteRend.flipX = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().flipX;
         lifeTimeTimer = lifeTime;
     }
 

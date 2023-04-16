@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Wood
   - Breakable Wall
+  - PlayerHurtbox
   layers:
   - Default
   - TransparentFX

@@ -41,13 +41,31 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collider entered");
-        DamageableEntity HitObject = other.GetComponent<DamageableEntity>();
-        if (HitObject != null)
+        /*
+                Debug.Log("Collider entered");
+                DamageableEntity HitObject = other.GetComponent<DamageableEntity>();
+                if (HitObject != null)
+                {
+                    HitObject.TakeDamage(damage);
+                    //HitObject.TakeDamageAndKnockback(damage, knockbackStrength, knockbackDelay, this.transform);
+                }
+                Destroy(gameObject);
+        */
+        if (other.CompareTag("Player"))
         {
-            HitObject.TakeDamage(damage);
-            //HitObject.TakeDamageAndKnockback(damage, knockbackStrength, knockbackDelay, this.transform);
+           if(other.GetComponent<PlayerController>().currentState != PlayerController.PlayerState.dashing)
+           {
+                DamageableEntity HitObject = other.GetComponent<DamageableEntity>();
+                if (HitObject != null)
+                {
+                    HitObject.TakeDamage(damage);
+                }
+                Destroy(gameObject);
+            }
         }
-        Destroy(gameObject);
+        if (other.CompareTag("Wall") || other.CompareTag("PlayerHurtbox"))  //Projectiles are destroyed when touching a wall or player melee
+        {
+            Destroy(gameObject);
+        }
     }
 }

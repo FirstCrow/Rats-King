@@ -181,7 +181,7 @@ public class PlayerController : DamageableEntity
             }
 
             //Dash (LShift)
-            if (Input.GetKeyDown(KeyCode.LeftShift))        //LShift = Dash/Roll
+            if (Input.GetKeyDown(KeyCode.LeftShift) && (direction.x != 0 || direction.y != 0))        //LShift = Dash/Roll
             {
                 Debug.Log("Dash Button Pressed!");
                 currentState = PlayerState.dashing;
@@ -331,10 +331,12 @@ public class PlayerController : DamageableEntity
 
     IEnumerator Dash() {
         AllowDash = false;      //Stops dash from being called repeatedly
-        hitbox.enabled = false;
+        //hitbox.enabled = false;
         float baseSpeed = speed;    //Saves the original speed 
-        
-        
+
+        if (direction.x > 0) GetComponent<SpriteRenderer>().flipX = true;           //Faces towards inputted direction
+        else if (direction.x < 0) GetComponent<SpriteRenderer>().flipX = false;
+
         speed *= dashSpeed;     //Because of fixed update I can't just set a temp speed here, I have to change the speed thats being called every update
         //Speed and Dashtime are used to determine the distance the player will travel in the dash, I thought .1 seconds at a speed of 9 looked nice
 
@@ -349,7 +351,7 @@ public class PlayerController : DamageableEntity
         dashVFX.GetComponent<DashVFX>().GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
         yield return new WaitForSeconds(DashTime / 3);
         
-        hitbox.enabled = true;
+        //hitbox.enabled = true;
         speed = 0;
 
         yield return new WaitForSeconds(dashDelay);   //Creates a delay after the dash where the player can be hit and they cant move
