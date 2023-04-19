@@ -9798,16 +9798,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
   maxCheese: 0
-  HP: 5
+  HP: 500
   healthSlider: {fileID: 0}
   healthText: {fileID: 0}
   currentBlood: 100
   bloodSlider: {fileID: 0}
+  bloodMeterAnim: {fileID: 0}
   cheese: 0
   cheeseText: {fileID: 0}
   currentState: 0
   speed: 4
-  dashSpeed: 10
+  dashSpeed: 6
   rotationPoint: {fileID: 6733180651528418485}
   dashDelay: 0
   arrow: {fileID: 2307157540231039870, guid: 17249882aaad3334ebc2fdaceefbc0a4, type: 3}

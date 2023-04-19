@@ -25,6 +25,7 @@ public class PlayerController : DamageableEntity
     private int maxBlood;
     public int currentBlood = 100;
     public Slider bloodSlider;
+    public Animator bloodMeterAnim;
 
     [Header("Cheese")]
     public int cheese = 0;
@@ -265,6 +266,7 @@ public class PlayerController : DamageableEntity
         */
         anim.SetInteger("curState", (int)currentState);
         anim.SetBool("isMoving", rb.velocity.magnitude != 0);
+        bloodMeterAnim.SetInteger("blood_amount", currentBlood);
 
 
         // Controls footstep SFX and VFX
