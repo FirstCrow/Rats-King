@@ -108745,7 +108745,7 @@ Tilemap:
       - {fileID: 1326006636, guid: c7375ade6f8054642837a4cbfde703f9, type: 3}
       - {fileID: -534014207, guid: c7375ade6f8054642837a4cbfde703f9, type: 3}
       - {fileID: 12228171, guid: c7375ade6f8054642837a4cbfde703f9, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -3, y: -15, z: 0}
@@ -110237,26 +110237,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3570963205020915291, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 3570963205020915291, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 3570963205020915291, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 3570963205020915291, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 34.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 3570963205020915291, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3884369809930046203, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -110369,14 +110349,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3884369811348444238, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -41.045044
-      objectReference: {fileID: 0}
-    - target: {fileID: 6946864210571434921, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e9687eb2bc5b4864698a21072afe5c79, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
 --- !u!1001 &6461371294677140122
