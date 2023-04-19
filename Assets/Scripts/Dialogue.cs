@@ -18,6 +18,9 @@ public class Dialogue : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.T)) {
             ParentCanvas.SetActive(false);
+
+            //Unpause Game
+            Time.timeScale = 1;
         }
     }
 }
