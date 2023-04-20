@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Enemies projectile Attack
 public class Projectile : MonoBehaviour
 {
     public float damage = 1f;
@@ -23,10 +24,7 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.rotation * new Vector3(speed, 0, 0);
-        playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
-        Vector3 rotation = playerPos - transform.position;
-        float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot - 90);
+        transform.rotation *= Quaternion.Euler(0, 0, -90);
     }
 
     // Update is called once per frame

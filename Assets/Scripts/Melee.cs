@@ -61,6 +61,8 @@ public class Melee : MonoBehaviour
         // ----------------------------------------------------------------------------------------------------------------
         if (other.tag == "Wall")
         {
+            Vector3 contact = (other.transform.position - transform.position);
+            player.TriggerRecoil(contact.normalized);
             Instantiate(WallSFX);
         }
         else if (other.tag == "Enemy")

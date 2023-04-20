@@ -163,7 +163,7 @@ public class PlayerController : DamageableEntity
                 direction = Vector2.zero;                   //Stops movement before attacking
                 rotationPoint.SetActive(true);
                 EnableRotationPoint();                      //Enables the rotation point for one frame only
-
+                StartCoroutine(MoveRecoil((rotationPoint.transform.rotation * Vector3.right)));
                 //Actual attack is done through animations instead of code
                 //Ideally, the player will be pushed forwards slightly here
                 attackTimer = GetAnimationClipLength("Player_Melee_1");
@@ -234,7 +234,11 @@ public class PlayerController : DamageableEntity
                 Debug.Log("Player location " + transform.position);
                 Debug.Log("Spawn Position " + (transform.position + direction * distance));
                 // Instantiate the object at a position that is distance units away from the source
-                Instantiate(arrow, transform.position + (rotationPoint.transform.rotation * Vector3.right), Quaternion.identity);
+
+
+                Instantiate(arrow, transform.position + (rotationPoint.transform.rotation * Vector3.right), rotationPoint.transform.rotation *= Quaternion.Euler(0,0,-90));
+                StartCoroutine(MoveRecoil(-1 * (rotationPoint.transform.rotation * Vector3.up)));
+
                 rotationPoint.SetActive(false);
                 currentState = PlayerState.moving;
             }
@@ -356,14 +360,13 @@ public class PlayerController : DamageableEntity
         //hitbox.enabled = true;
         speed = 0;
 
-        yield return new WaitForSeconds(dashDelay);   //Creates a delay after the dash where the player can be hit and they cant move
+           //Creates a delay after the dash where the player can be hit and they cant move
 
         //Returns control and normal speed back to the player
         speed = baseSpeed;
         currentState = PlayerState.moving;
 
-        //Another timer could be implemented here to stop the player from spamming dashes
-        //I think the half second delay already accomplished that so I wont add it 
+        yield return new WaitForSeconds(dashDelay);
         AllowDash = true;
     }
 
@@ -389,4 +392,21 @@ public class PlayerController : DamageableEntity
         bloodSlider.value = currentBlood;
     }
 
+    public void TriggerRecoil(Vector3 Direction) {
+        StartCoroutine(MoveRecoil(Direction));
+    }
+
+    IEnumerator MoveRecoil(Vector3 Direction)
+    {
+        float baseSpeed = speed;
+        //speed = 0;
+        float timer = .1f;
+        while (timer > 0) {
+            transform.position += (Direction * Time.deltaTime * 2f);
+            yield return new WaitForSeconds(Time.deltaTime);
+            timer -= Time.deltaTime;
+        } 
+        rb.velocity = Vector2.zero;
+        speed = baseSpeed;
+    }
 }

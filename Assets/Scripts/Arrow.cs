@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Players Projectile
 //Thanks to https://youtu.be/-bkmPm_Besk for the code
 public class Arrow : MonoBehaviour
 {
@@ -21,15 +22,8 @@ public class Arrow : MonoBehaviour
     void Start()
     {
         lifeTimeTimer = lifeTime;
-        playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
-
         rb = GetComponent<Rigidbody2D>();
-        Vector3 rotation = playerPos - transform.position;
-        Vector3 direction = transform.position - playerPos;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * speed;
-        float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
-
+        rb.velocity = transform.rotation * new Vector3(0, speed, 0);
         Instantiate(arrowSFX);
 
     }

@@ -5079,6 +5079,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Object (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 848318325282702481, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6433348858279877250, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -6640,6 +6644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Object
       objectReference: {fileID: 0}
+    - target: {fileID: 848318325282702481, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6433348858279877250, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -6696,6 +6704,10 @@ PrefabInstance:
     - target: {fileID: 848318325282702481, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
       propertyPath: m_Name
       value: Dialogue Object (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 848318325282702481, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3258449350155639354, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
       propertyPath: m_IsActive
@@ -8808,6 +8820,10 @@ PrefabInstance:
     - target: {fileID: 848318325282702481, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
       propertyPath: m_Name
       value: Dialogue Object R
+      objectReference: {fileID: 0}
+    - target: {fileID: 848318325282702481, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3258449350155639354, guid: 129af8226a5e53848b40bb29f4f5def1, type: 3}
       propertyPath: m_IsActive
