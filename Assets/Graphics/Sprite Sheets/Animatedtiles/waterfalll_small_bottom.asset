@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: sewer_waterfall_new
+  m_Name: waterfalll_small_bottom
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -845301094, guid: b7cb82b49c2e747418df727dc2d94031, type: 3}
-  - {fileID: -1048389229, guid: b7cb82b49c2e747418df727dc2d94031, type: 3}
-  - {fileID: -144370254, guid: b7cb82b49c2e747418df727dc2d94031, type: 3}
-  - {fileID: 820983309, guid: b7cb82b49c2e747418df727dc2d94031, type: 3}
-  - {fileID: -2021808270, guid: b7cb82b49c2e747418df727dc2d94031, type: 3}
-  - {fileID: 1158087924, guid: b7cb82b49c2e747418df727dc2d94031, type: 3}
+  - {fileID: 1553768117, guid: cc700284f538b8a4495faf80f568aa0b, type: 3}
+  - {fileID: -919147214, guid: cc700284f538b8a4495faf80f568aa0b, type: 3}
+  - {fileID: -1370247076, guid: cc700284f538b8a4495faf80f568aa0b, type: 3}
+  - {fileID: 204398338, guid: cc700284f538b8a4495faf80f568aa0b, type: 3}
+  - {fileID: 230025013, guid: cc700284f538b8a4495faf80f568aa0b, type: 3}
+  - {fileID: 617912313, guid: cc700284f538b8a4495faf80f568aa0b, type: 3}
   m_MinSpeed: 15
   m_MaxSpeed: 15
   m_AnimationStartTime: 0

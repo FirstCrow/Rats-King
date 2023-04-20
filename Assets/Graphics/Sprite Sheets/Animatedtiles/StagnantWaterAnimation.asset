@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: sewer_waterfall_bottom
+  m_Name: StagnantWaterAnimation
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
+  m_AnimatedSprites:
+  - {fileID: -964398394, guid: 73ba05f7ab1589f41a5f93c3ade53521, type: 3}
+  - {fileID: -1846370204, guid: 73ba05f7ab1589f41a5f93c3ade53521, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
