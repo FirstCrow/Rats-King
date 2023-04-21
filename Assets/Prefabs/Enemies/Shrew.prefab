@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8579152299764955404}
   - component: {fileID: 8579152299764955405}
   - component: {fileID: -8139066723931850094}
+  - component: {fileID: 7366243609346417342}
   m_Layer: 3
   m_Name: Shrew
   m_TagString: Enemy
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.7921569, g: 0.78726935, b: 0.20392156, a: 1}
+  m_Sprite: {fileID: -59294193, guid: ce99a71dd3cdfeb4e92597463d3333c1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -140,8 +141,28 @@ MonoBehaviour:
   maxCheese: 1
   HP: 3
   speed: 2
-  shootSpeed: 2
+  shootSpeed: 1
   shootRadius: 7
   idealRange: 5
   player: {fileID: 0}
   Knife: {fileID: 1261752623962451358, guid: 66811498117205342b846667f36596d4, type: 3}
+--- !u!95 &7366243609346417342
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579152299764955393}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03a2b427b7e6c794f8deff0e7d8616ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

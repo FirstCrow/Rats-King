@@ -9798,7 +9798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
   maxCheese: 0
-  HP: 500
+  HP: 5
   healthSlider: {fileID: 0}
   healthText: {fileID: 0}
   currentBlood: 100

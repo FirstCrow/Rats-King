@@ -5690,14 +5690,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8139066723931850094, guid: af74a93607d5e864b898c03b954664cb, type: 3}
-      propertyPath: shootSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8139066723931850094, guid: af74a93607d5e864b898c03b954664cb, type: 3}
-      propertyPath: knifeRotationOffset
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 8579152299764955393, guid: af74a93607d5e864b898c03b954664cb, type: 3}
       propertyPath: m_Name
       value: Shrew
@@ -8699,10 +8691,6 @@ PrefabInstance:
       propertyPath: bloodMeterAnim
       value: 
       objectReference: {fileID: 909114758}
-    - target: {fileID: 6733180650253901108, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6733180650253901109, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -8746,10 +8734,6 @@ PrefabInstance:
     - target: {fileID: 6733180650253901109, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733180650404955592, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
@@ -8890,65 +8874,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1651556591906725941, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1722166087977816034, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2062049429424901968, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 494073453}
-    - target: {fileID: 2062049429424901975, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062049429424901975, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_SleepingMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062049429424901975, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062049429424901979, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062049429424901979, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741625669823517779, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741625669823517779, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741625669823517779, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6997156333014712066, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_Color.a
-      value: 0.4392157
-      objectReference: {fileID: 0}
-    - target: {fileID: 6997156333014712066, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8574962781232945157, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
       propertyPath: m_Name
       value: Mouse
-      objectReference: {fileID: 0}
-    - target: {fileID: 8574962781232945157, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8574962781232945158, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
       propertyPath: m_RootOrder
@@ -8992,10 +8924,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8574962781232945158, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8574962781247620104, guid: de556fb1ea56fa044bcdae59b8ac4f5e, type: 3}
-      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

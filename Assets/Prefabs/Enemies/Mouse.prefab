@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4741625669823517779}
   - component: {fileID: 6997156333014712066}
   - component: {fileID: 1722166087977816034}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hurtbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9245283, g: 0, b: 0, a: 0.53333336}
+  m_Color: {r: 0.9245283, g: 0, b: 0, a: 0.4392157}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 2062049429424901975}
   - component: {fileID: 2062049429424901968}
   - component: {fileID: 5163720723414122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mouse
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -189,8 +189,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.25076702, g: 0.7921569, b: 0.20392156, a: 1}
+  m_Sprite: {fileID: -265831137, guid: 02cc454928dbd2c46a63e8ab9be68d75, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -224,7 +224,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062049429424901979}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -234,8 +234,8 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2062049429424901968
 MonoBehaviour:
@@ -383,8 +383,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.16894111, g: 0.6792453, b: 0, a: 1}
+  m_Sprite: {fileID: -265831137, guid: 02cc454928dbd2c46a63e8ab9be68d75, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

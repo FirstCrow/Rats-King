@@ -182,7 +182,7 @@ public class PlayerController : DamageableEntity
             }
 
             //Dash (LShift)
-            if (Input.GetKeyDown(KeyCode.LeftShift) && (direction.x != 0 || direction.y != 0))        //LShift = Dash/Roll
+            if (Input.GetKeyDown(KeyCode.LeftShift) && (direction.x != 0 || direction.y != 0) && AllowDash)        //LShift = Dash/Roll
             {
                 Debug.Log("Dash Button Pressed!");
                 currentState = PlayerState.dashing;
@@ -205,8 +205,9 @@ public class PlayerController : DamageableEntity
         else if (currentState == PlayerState.attacking)
         {
             attackTimer -= Time.deltaTime;
+            //rb.AddForce((rotationPoint.transform.rotation * Vector3.right) * 200 * attackTimer);  //alternative push force
 
-            if(attackTimer <= 0)
+            if (attackTimer <= 0)
             {
                 rotationPoint.SetActive(false);
                 currentState = PlayerState.moving;

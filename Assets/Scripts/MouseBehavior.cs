@@ -55,7 +55,7 @@ public class MouseBehavior : DamageableEntity
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-            direction = (transform.position.x > player.transform.position.x) ? 1 : -1;  //Enemy faces towards player when moving
+            direction = (transform.position.x > player.transform.position.x) ? -1 : 1;  //Enemy faces towards player when moving
             //playFootsteps();
         }
 

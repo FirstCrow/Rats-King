@@ -18,11 +18,15 @@ public class ShrewBehavior : DamageableEntity
     //private AudioSource footstep;
     private float shootTimer = 0;
 
+    private Animator anim;
+
     void Start()
     {
         //footstep = GetComponent<AudioSource>();
         //footstep.loop = false;
         player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -32,6 +36,7 @@ public class ShrewBehavior : DamageableEntity
         {
             shootTimer += Time.deltaTime;
             if (shootTimer > shootSpeed) {
+                anim.SetTrigger("attack");
                 Debug.Log("Shooting");
                 //Shrew should start shooting towards player
                 Vector3 dir = player.transform.position - transform.position;
@@ -43,15 +48,19 @@ public class ShrewBehavior : DamageableEntity
                                                 Quaternion.Euler(0, 0, angle));
                 shootTimer = 0;
             }
-            
         }
 
         if (Vector2.Distance(transform.position, player.transform.position) < idealRange) {
             Debug.Log("Retreating");
+            anim.SetBool("retreating", true);
 
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, -speed * Time.deltaTime);
             //shrew should start backing away
             //probably can use an inverted form of movetowards
+        }
+        else
+        {
+            anim.SetBool("retreating", false);
         }
 
     }
