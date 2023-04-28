@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -11,7 +13,13 @@ public class DialogueTrigger : MonoBehaviour
     public bool showPortrait;
     public GameObject dialogueBox;
     public GameObject portrait;
-    //public string message;
+
+    [Header("Dialogue Variables")]
+    public string message;
+    public TextMeshProUGUI textBox;
+    public Sprite portraitSprite;
+    public Image portraitImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +41,8 @@ public class DialogueTrigger : MonoBehaviour
 
             DialogueObject.SetActive(true);
             portrait.SetActive(true);
+            textBox.text = message;
+            portraitImage.sprite = portraitSprite;
             if (Repeatable == false) {
                 Destroy(gameObject.GetComponent<BoxCollider2D>());
             }

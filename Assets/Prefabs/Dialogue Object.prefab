@@ -342,6 +342,10 @@ MonoBehaviour:
   showPortrait: 0
   dialogueBox: {fileID: 8362786659612568666}
   portrait: {fileID: 1707558050587456148}
+  message: Insert text here pls :)
+  textBox: {fileID: 7741806720145230019}
+  portraitSprite: {fileID: 21300000, guid: 3b32fe396b8c9ae47aa1655a1a2078e2, type: 3}
+  portraitImage: {fileID: 2157594296416496915}
 --- !u!1 &1104063807261199517
 GameObject:
   m_ObjectHideFlags: 0
