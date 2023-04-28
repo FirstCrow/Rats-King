@@ -159,17 +159,40 @@ public class PlayerController : DamageableEntity
             //Melee Attack (Left Mouse)
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                Debug.Log("Attack Button Pressed!");
+                //Debug.Log("Attack Button Pressed!");
                 direction = Vector2.zero;                   //Stops movement before attacking
                 rotationPoint.SetActive(true);
                 EnableRotationPoint();                      //Enables the rotation point for one frame only
                 StartCoroutine(MoveRecoil((rotationPoint.transform.rotation * Vector3.right)));
                 //Actual attack is done through animations instead of code
                 //Ideally, the player will be pushed forwards slightly here
-                attackTimer = GetAnimationClipLength("Player_Melee_1");
+                attackTimer = GetAnimationClipLength("player_attack_down");
                 currentState = PlayerState.attacking;
 
                 Instantiate(slashingSFX);
+
+                //Animation for attack direction
+                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 playerPos = this.transform.position;
+                Vector2 dir = mousePos - playerPos;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                Debug.Log("Angle: " + angle);
+                if (angle > 45 && angle < 135)   //Up
+                {
+                    anim.SetInteger("attackDir", 1);
+                }
+                else if (angle > -45 && angle < 45) //Right
+                {
+                    anim.SetInteger("attackDir", 2);
+                }
+                else if(angle > -135 && angle < -45) //Down
+                {
+                    anim.SetInteger("attackDir", 3);
+                }
+                else //Left
+                {
+                    anim.SetInteger("attackDir", 4);
+                }
             }
 
             //Ranged Attack (Right Mouse)
