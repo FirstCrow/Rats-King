@@ -154,7 +154,7 @@ public class PlayerController : DamageableEntity
 
             direction.x = Input.GetAxisRaw("Horizontal");   //Get Horizontal Inputs (A or D | Left or Right)
             direction.y = Input.GetAxisRaw("Vertical");     //Get Vertical Inputs (W or S | Up or Down)
-            GetComponent<SpriteRenderer>().flipX = (Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x) ? false : true;
+            GetComponent<SpriteRenderer>().flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x >= transform.position.x;
 
             //Melee Attack (Left Mouse)
             if (Input.GetKeyDown(KeyCode.Mouse0))
