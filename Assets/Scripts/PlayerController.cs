@@ -57,7 +57,7 @@ public class PlayerController : DamageableEntity
     public int arrowCost = 20;
 
     [Header("Melee Variables")]
-    private float attackTimer = 0f;         //Duration of melee attack(s)
+    public float attackTimer = 0f;         //Duration of melee attack(s)
 
     public bool AllowDash = true;   //Used to only allow one dash at a time and to limit the use of dashes
     public float DashTime = .1f;
@@ -79,6 +79,8 @@ public class PlayerController : DamageableEntity
     AnimationClip[] clips;          //Stores all animation clips (used to get animation lengths)
     Camera mainCam;
     Vector3 mousePos;
+    public float attackangle;
+    public int attackcounter;
 
     private bool healing = false;
     private float healingTime = 0;
@@ -175,17 +177,17 @@ public class PlayerController : DamageableEntity
                 Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 playerPos = this.transform.position;
                 Vector2 dir = mousePos - playerPos;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                Debug.Log("Angle: " + angle);
-                if (angle > 45 && angle < 135)   //Up
+                float attackangle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                //Debug.Log("Angle: " + attackangle);
+                if (attackangle > 45 && attackangle < 135)   //Up
                 {
                     anim.SetInteger("attackDir", 1);
                 }
-                else if (angle > -45 && angle < 45) //Right
+                else if (attackangle > -45 && attackangle < 45) //Right
                 {
                     anim.SetInteger("attackDir", 2);
                 }
-                else if(angle > -135 && angle < -45) //Down
+                else if(attackangle > -135 && attackangle < -45) //Down
                 {
                     anim.SetInteger("attackDir", 3);
                 }
@@ -193,12 +195,13 @@ public class PlayerController : DamageableEntity
                 {
                     anim.SetInteger("attackDir", 4);
                 }
+                attackcounter = 1;
             }
 
             //Ranged Attack (Right Mouse)
             if (Input.GetKeyDown(KeyCode.Mouse1) && currentBlood >= arrowCost)           //Right Mouse (Hold) = Aim Ranged Attack
             {
-                Debug.Log("Ranged Button Pressed!");
+                //Debug.Log("Ranged Button Pressed!");
                 direction = Vector2.zero;                   //Stops movement before aiming
                 rotationPoint.SetActive(true);
                 currentState = PlayerState.aiming;
@@ -207,7 +210,7 @@ public class PlayerController : DamageableEntity
             //Dash (LShift)
             if (Input.GetKeyDown(KeyCode.LeftShift) && (direction.x != 0 || direction.y != 0) && AllowDash)        //LShift = Dash/Roll
             {
-                Debug.Log("Dash Button Pressed!");
+                //Debug.Log("Dash Button Pressed!");
                 currentState = PlayerState.dashing;
             }
 
@@ -235,6 +238,8 @@ public class PlayerController : DamageableEntity
                 rotationPoint.SetActive(false);
                 currentState = PlayerState.moving;
             }
+
+            
         }
 
         //-----AIMING STATE-----
@@ -245,7 +250,7 @@ public class PlayerController : DamageableEntity
 
             if (Input.GetKeyUp(KeyCode.Mouse1))
             {
-                Debug.Log("Ranged Button Released!");       //Right Mouse (Release) = Shoot Ranged Attack
+                //Debug.Log("Ranged Button Released!");       //Right Mouse (Release) = Shoot Ranged Attack
                 
                                                             // The distance you want to spawn the object away from the source
                 float distance = 1.0f;
@@ -255,8 +260,8 @@ public class PlayerController : DamageableEntity
 
                 // Determine the direction based on the Quaternion identity
                 Vector3 direction = Quaternion.identity * Vector3.right;
-                Debug.Log("Player location " + transform.position);
-                Debug.Log("Spawn Position " + (transform.position + direction * distance));
+                //Debug.Log("Player location " + transform.position);
+                //Debug.Log("Spawn Position " + (transform.position + direction * distance));
                 // Instantiate the object at a position that is distance units away from the source
 
 
@@ -345,7 +350,7 @@ public class PlayerController : DamageableEntity
     }
 
     //Gets the Animation Clip length of a given name (invalid names return error)
-    float GetAnimationClipLength(string name)
+    public float GetAnimationClipLength(string name)
     {
         foreach(AnimationClip clip in clips)
         {

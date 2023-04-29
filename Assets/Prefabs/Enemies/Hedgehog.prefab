@@ -4823,6 +4823,7 @@ GameObject:
   - component: {fileID: 3015664263481364703}
   - component: {fileID: 7331076351262030907}
   - component: {fileID: 9144262854210696805}
+  - component: {fileID: 3329757788988995052}
   m_Layer: 3
   m_Name: Hurtbox
   m_TagString: Untagged
@@ -4923,6 +4924,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2481378}
   m_EdgeRadius: 0
+--- !u!114 &3329757788988995052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5555752396450894027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717659fccb8b3e641ad97bce3a6d99c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  WallSFX: {fileID: 0}
+  EnemyHitSFX: {fileID: 0}
+  WoodBreakingSFX: {fileID: 0}
+  BreakableWallSFX: {fileID: 0}
+  knockbackStrength: 8
+  knockbackDelay: 0.15
+  MeleeVFX: {fileID: 0}
 --- !u!1 &8497918723549551204
 GameObject:
   m_ObjectHideFlags: 0
@@ -5215,6 +5236,6 @@ MonoBehaviour:
   HP: 5
   speed: 2
   detectRadius: 7
-  attackRange: 3
+  attackRange: 2
   player: {fileID: 6733180650253901097, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
   dust: {fileID: 207703802036487779}
