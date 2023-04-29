@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
-  maxCheese: 1
+  maxCheese: 2
   HP: 3
   speed: 2
   shootSpeed: 1

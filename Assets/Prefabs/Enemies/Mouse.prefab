@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4741625669823517779}
   - component: {fileID: 6997156333014712066}
   - component: {fileID: 1722166087977816034}
-  m_Layer: 3
+  - component: {fileID: 489744394424474906}
+  m_Layer: 0
   m_Name: Hurtbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,6 +112,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &489744394424474906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651556591906725941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717659fccb8b3e641ad97bce3a6d99c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  WallSFX: {fileID: 0}
+  EnemyHitSFX: {fileID: 0}
+  WoodBreakingSFX: {fileID: 0}
+  BreakableWallSFX: {fileID: 0}
+  knockbackStrength: 8
+  knockbackDelay: 0.15
+  MeleeVFX: {fileID: 0}
 --- !u!1 &2062049429424901979
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,10 +271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
-  maxCheese: 2
+  maxCheese: 3
   HP: 1
   speed: 5
-  attackRange: 1.5
+  attackRange: 1
   player: {fileID: 0}
 --- !u!95 &5163720723414122
 Animator:

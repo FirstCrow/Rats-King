@@ -15,7 +15,9 @@ public class HedgehogBehavior : DamageableEntity
     private int direction;
     private float scale;
     public ParticleSystem dust;
-
+    private Vector3 randompoint;
+    private int randomsteps;
+    private int steps = 0;
 
     [Header("Enemy Footsteps")]
 
@@ -26,6 +28,9 @@ public class HedgehogBehavior : DamageableEntity
 
     void Start()
     {
+        randompoint = transform.position + new Vector3(Random.Range(-5,5), Random.Range(-5, 5), 0f);
+        randomsteps = Random.Range(10, 500);
+
         footstep = GetComponent<AudioSource>();
         footstep.loop = false;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -48,7 +53,8 @@ public class HedgehogBehavior : DamageableEntity
                 attacking = false;
             }
         }
-        else if (Vector2.Distance(transform.position, player.transform.position) < attackRange) {
+        else if (Vector2.Distance(transform.position, player.transform.position) < attackRange)
+        {
             //get attack animation length
             attackTimer = 1.5f;
             Debug.Log("Hedgehog Attacking");
@@ -62,7 +68,10 @@ public class HedgehogBehavior : DamageableEntity
             playFootsteps();
         }
         else
+        {
             stopFootsteps();
+            RandomMotion();
+        }
 
         transform.localScale = new Vector2(scale * direction, scale);   //Determines which direction enemy faces
 
@@ -110,5 +119,16 @@ public class HedgehogBehavior : DamageableEntity
     public void PlayDust()
     {
         dust.Play();
+    }
+
+    public void RandomMotion() {
+        transform.position = Vector2.MoveTowards(transform.position, randompoint, speed * Time.deltaTime);
+        steps++;
+        if (steps > randomsteps) {
+            steps = 0;
+            randompoint = transform.position + new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), 0f);
+            randomsteps = Random.Range(10, 500);
+        }
+
     }
 }

@@ -4824,7 +4824,7 @@ GameObject:
   - component: {fileID: 7331076351262030907}
   - component: {fileID: 9144262854210696805}
   - component: {fileID: 3329757788988995052}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Hurtbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4936,7 +4936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717659fccb8b3e641ad97bce3a6d99c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 3
   WallSFX: {fileID: 0}
   EnemyHitSFX: {fileID: 0}
   WoodBreakingSFX: {fileID: 0}
@@ -5082,7 +5082,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!82 &2437582921228967635
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5232,10 +5232,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
-  maxCheese: 0
+  maxCheese: 4
   HP: 5
   speed: 2
   detectRadius: 7
   attackRange: 2
   player: {fileID: 6733180650253901097, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
   dust: {fileID: 207703802036487779}
+  rb: {fileID: 8497918723549551208}
