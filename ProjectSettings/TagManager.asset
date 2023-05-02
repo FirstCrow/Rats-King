@@ -9,6 +9,7 @@ TagManager:
   - Wood
   - Breakable Wall
   - PlayerHurtbox
+  - DeathScreen
   layers:
   - Default
   - TransparentFX

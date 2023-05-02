@@ -43,6 +43,9 @@ public class HedgehogBehavior : DamageableEntity
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (player == null) {
+            return;
+        }
         if (attacking)
         {
             attackTimer -= Time.deltaTime;

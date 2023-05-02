@@ -32,6 +32,10 @@ public class ShrewBehavior : DamageableEntity
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (player == null)
+        {
+            return;
+        }
         if (Vector2.Distance(transform.position, player.transform.position) < shootRadius)
         {
             shootTimer += Time.deltaTime;

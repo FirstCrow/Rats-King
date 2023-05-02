@@ -81,6 +81,7 @@ public class PlayerController : DamageableEntity
     Vector3 mousePos;
     public float attackangle;
     public int attackcounter;
+    public GameObject deathScreen;
 
     private bool healing = false;
     private float healingTime = 0;
@@ -437,5 +438,12 @@ public class PlayerController : DamageableEntity
         } 
         rb.velocity = Vector2.zero;
         speed = baseSpeed;
+    }
+
+    public override void Die()
+    {
+        maxCheese = cheese;
+        deathScreen.SetActive(true);
+        base.Die();
     }
 }

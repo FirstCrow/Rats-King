@@ -16,6 +16,10 @@ public class CheeseEntity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+        {
+            return;
+        }
         //Debug.Log(Vector2.Distance(player.transform.position, transform.position));
         if (Vector2.Distance(player.transform.position, transform.position) <= maxRange) {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime / Vector2.Distance(player.transform.position, transform.position));  

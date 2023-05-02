@@ -18,6 +18,10 @@ public class CameraFollow : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (target == null)
+        {
+            return;
+        }
         //GetComponent<Camera>().orthographicSize = size;
         Vector3 desiredPosition = target.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);

@@ -5590,6 +5590,11 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!1 &893334927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1410990313020965565, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
+  m_PrefabInstance: {fileID: 3884369810257681506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &909114758 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 909114758, guid: ef4bf6236ddd19a479a2b4dcc61dd21e, type: 3}
@@ -8861,6 +8866,10 @@ PrefabInstance:
       propertyPath: bloodSlider
       value: 
       objectReference: {fileID: 1047781615}
+    - target: {fileID: 6733180650253901099, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 893334927}
     - target: {fileID: 6733180650253901099, guid: 038c6f67f819f734ea876d0ae0da048a, type: 3}
       propertyPath: healthSlider
       value: 
