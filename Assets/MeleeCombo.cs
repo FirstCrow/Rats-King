@@ -15,7 +15,7 @@ public class MeleeCombo : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && thisplayer.attackcounter < 3)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && thisplayer.attackcounter < 3 && thisplayer.attackTimer <= .15f)
         {
             Debug.Log("Repeating attack");
             animator.SetTrigger("repeatattack");
