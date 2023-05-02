@@ -9898,6 +9898,7 @@ MonoBehaviour:
   dashDelay: 1
   arrow: {fileID: 2307157540231039870, guid: 17249882aaad3334ebc2fdaceefbc0a4, type: 3}
   arrowCost: 20
+  attackTimer: 0
   AllowDash: 1
   DashTime: 0.1
   dashVFX: {fileID: 7187306465890056340, guid: bd7f9fca6fd76834e8704da305992ec3, type: 3}
@@ -9906,6 +9907,9 @@ MonoBehaviour:
   dashSFX: {fileID: 2250256050902311756, guid: 19004458fd06e4c00a178c82dafecd98, type: 3}
   dust: {fileID: 1984498763}
   healVFX: {fileID: 1315985544}
+  attackangle: 0
+  attackcounter: 0
+  deathScreen: {fileID: 0}
 --- !u!1 &6733180650404955598
 GameObject:
   m_ObjectHideFlags: 0
