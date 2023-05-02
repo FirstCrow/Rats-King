@@ -12,9 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: Medium_Waterfall
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: -1907965870, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: 986480458, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: 510610169, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: 1160484200, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: 58779804, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: 866436641, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: 1456999449, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: -558294628, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: -1271940244, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: 400472861, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: 32770724, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  - {fileID: -1658770937, guid: 3938ce250f1560b45b022f9dd3744d58, type: 3}
+  m_MinSpeed: 15
+  m_MaxSpeed: 15
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
