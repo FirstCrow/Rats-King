@@ -9896,6 +9896,7 @@ MonoBehaviour:
   dashSpeed: 6
   rotationPoint: {fileID: 6733180651528418485}
   dashDelay: 1
+  chefHat: {fileID: 3989181344520065998}
   arrow: {fileID: 2307157540231039870, guid: 17249882aaad3334ebc2fdaceefbc0a4, type: 3}
   arrowCost: 20
   attackTimer: 0

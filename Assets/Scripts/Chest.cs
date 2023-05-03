@@ -10,10 +10,12 @@ public class Chest : MonoBehaviour
     SpriteRenderer mainSprite;
     public GameObject cheese;
     public Sprite openChestSprite;
+    GameObject player;
 
     void Start()
     {
         mainSprite = GetComponentInParent<SpriteRenderer>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
@@ -33,6 +35,8 @@ public class Chest : MonoBehaviour
         {
             Instantiate(cheese, transform.position + new Vector3(Random.Range(-3f, 3f), Random.Range(-4f, 0f)), Quaternion.identity);
         }
+
+        player.GetComponent<PlayerController>().EnableChefHat();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
