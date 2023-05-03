@@ -10,6 +10,7 @@ TagManager:
   - Breakable Wall
   - PlayerHurtbox
   - DeathScreen
+  - Chest
   layers:
   - Default
   - TransparentFX
