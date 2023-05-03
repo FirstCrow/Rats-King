@@ -48,6 +48,7 @@ public class PlayerController : DamageableEntity
     private Vector2 direction;              //Player direction (based on movement inputs [WASD])
     public GameObject rotationPoint;
     public float dashDelay = 0.1f;
+    public GameObject chefHat;
 
     //private PlayerHealth playerHealth;
 
@@ -438,6 +439,11 @@ public class PlayerController : DamageableEntity
         } 
         rb.velocity = Vector2.zero;
         speed = baseSpeed;
+    }
+
+    public void EnableChefHat()
+    {
+        chefHat.SetActive(true);
     }
 
     public override void Die()
