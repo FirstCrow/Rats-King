@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: floatyshoe
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: -1280691693, guid: 82385dc8d6b612c4480f1a9375528f90, type: 3}
+  - {fileID: -448297138, guid: 82385dc8d6b612c4480f1a9375528f90, type: 3}
+  - {fileID: 1069557739, guid: 82385dc8d6b612c4480f1a9375528f90, type: 3}
+  - {fileID: 1438167525, guid: 82385dc8d6b612c4480f1a9375528f90, type: 3}
+  m_MinSpeed: 2
+  m_MaxSpeed: 2
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
