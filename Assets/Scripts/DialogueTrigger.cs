@@ -21,11 +21,14 @@ public class DialogueTrigger : MonoBehaviour
     public TextMeshProUGUI textBox;
     public Sprite portraitSprite;
     public Image portraitImage;
+    GameObject interactText;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        interactText = GameObject.Find("InteractText");
+        interactText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -68,6 +71,7 @@ public class DialogueTrigger : MonoBehaviour
             else
             {
                 nearPlayer = true;
+                interactText.SetActive(true);
             }
         }
     }
@@ -77,6 +81,7 @@ public class DialogueTrigger : MonoBehaviour
         if(col.gameObject == player)
         {
             nearPlayer = false;
+            interactText.SetActive(false);
         }
     }
 }

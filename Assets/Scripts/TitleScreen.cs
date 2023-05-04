@@ -67,7 +67,7 @@ public class TitleScreen : MonoBehaviour
     public void StartGame()
     {
         Instantiate(select);                        // Plays select SFX
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("ComicScene");
         Debug.Log("Start Button Clicked");
     }
 

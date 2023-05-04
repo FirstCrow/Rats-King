@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TechArtist.unity
     guid: 218a24a118a3d38408f4cba3fc6cc3d7
   - enabled: 1
+    path: Assets/Scenes/ComicScene.unity
+    guid: 60155bd733d98aa4dae952de1d9d53e8
+  - enabled: 1
     path: Assets/Scenes/Title Screen.unity
     guid: 28490d27dbd330f41861d23aea493311
   - enabled: 1
