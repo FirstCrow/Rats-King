@@ -118,7 +118,7 @@ public class PlayerController : DamageableEntity
         if(currentState == PlayerState.moving)
         {
 
-            if (Input.GetKeyDown(KeyCode.R) && healingTime == 0f && HP < maxHealth && currentBlood >= 10)   //Starting to heal
+            if (Input.GetKeyDown(KeyCode.R) && healingTime <= 0f && HP < maxHealth && currentBlood >= 10)   //Starting to heal
             {
                 healingTime = 0.01f;
                 healing = true;
@@ -143,7 +143,7 @@ public class PlayerController : DamageableEntity
                 if (healingTime >= 2.0f && healing) //2 is the current time it takes to heal
                 {
                     if (HP < maxHealth && currentBlood >= 10) {
-                        TakeDamage(-1);
+                        TakeDamage(-2);
                         UseBlood(10);
 
                         healVFX.Stop();
@@ -410,6 +410,11 @@ public class PlayerController : DamageableEntity
         base.TakeDamage(damage);
         if (damage > 0)
             hurtSFX.Play();
+        else
+        {
+            if (HP > maxHealth)
+                HP = maxHealth;
+        }
 
         healthSlider.value = HP;
         healthText.text = HP + "/" + maxHealth;
