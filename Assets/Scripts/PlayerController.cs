@@ -68,7 +68,9 @@ public class PlayerController : DamageableEntity
     public AudioSource footstep;
     private bool footstepsPlaying;
     public GameObject slashingSFX;  //Variable to reference slashing sound effect
-    public AudioSource dashSFX; 
+    public AudioSource dashSFX;
+    public AudioSource healSFX;
+    public AudioSource hurtSFX;
 
     [Header("VFX Effects")]
     public ParticleSystem dust;
@@ -124,6 +126,7 @@ public class PlayerController : DamageableEntity
 
                 //Healing VFX
                 healVFX.Play();
+                healSFX.Play();
             }
             if (Input.GetKeyUp(KeyCode.R) && healing)   //Stop healing
             {
@@ -132,6 +135,7 @@ public class PlayerController : DamageableEntity
                 //animate
 
                 healVFX.Stop();
+                healSFX.Stop();
             }
             if (healingTime > 0)    //In process of Healing
             {
@@ -404,6 +408,9 @@ public class PlayerController : DamageableEntity
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
+        if (damage > 0)
+            hurtSFX.Play();
+
         healthSlider.value = HP;
         healthText.text = HP + "/" + maxHealth;
        

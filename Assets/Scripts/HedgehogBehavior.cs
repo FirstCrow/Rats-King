@@ -22,8 +22,9 @@ public class HedgehogBehavior : DamageableEntity
     [Header("Enemy Footsteps")]
 
     private bool footstepsPlaying;
-    private AudioSource footstep;
+    public AudioSource footstep;
     private Animator anim;
+    public AudioSource attackSFX;
 
 
     void Start()
@@ -31,7 +32,6 @@ public class HedgehogBehavior : DamageableEntity
         randompoint = transform.position + new Vector3(Random.Range(-5,5), Random.Range(-5, 5), 0f);
         randomsteps = Random.Range(10, 500);
 
-        footstep = GetComponent<AudioSource>();
         footstep.loop = false;
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
@@ -63,6 +63,7 @@ public class HedgehogBehavior : DamageableEntity
             Debug.Log("Hedgehog Attacking");
             //play attack animation
             attacking = true;
+            attackSFX.Play();
         }
         else if (Vector2.Distance(transform.position, player.transform.position) < detectRadius)
         {
