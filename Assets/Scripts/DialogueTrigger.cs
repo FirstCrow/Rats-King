@@ -21,13 +21,12 @@ public class DialogueTrigger : MonoBehaviour
     public TextMeshProUGUI textBox;
     public Sprite portraitSprite;
     public Image portraitImage;
-    GameObject interactText;
+    public GameObject interactText;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        interactText = GameObject.Find("InteractText");
         interactText.SetActive(false);
     }
 
