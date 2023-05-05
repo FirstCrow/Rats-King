@@ -253,6 +253,7 @@ public class PlayerController : DamageableEntity
         else if (currentState == PlayerState.aiming)
         {
             EnableRotationPoint();                          //Allows rotation during the aim state
+            GetComponent<SpriteRenderer>().flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x <= transform.position.x;
 
             if (Input.GetKeyUp(KeyCode.Mouse1))
             {
