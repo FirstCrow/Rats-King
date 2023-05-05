@@ -10,6 +10,8 @@ public class Chest : MonoBehaviour
     SpriteRenderer mainSprite;
     public GameObject cheese;
     public Sprite openChestSprite;
+    public AudioSource openChestAudio;
+    public AudioSource backgroundMusic;
     GameObject player;
 
     void Start()
@@ -37,6 +39,11 @@ public class Chest : MonoBehaviour
         }
 
         player.GetComponent<PlayerController>().EnableChefHat();
+        backgroundMusic.Stop();
+        backgroundMusic.loop = false;
+        openChestAudio.Play();
+        StartCoroutine(chestAudio());
+        
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -53,5 +60,13 @@ public class Chest : MonoBehaviour
         {
             nearPlayer = false;
         }
+    }
+
+    IEnumerator chestAudio()
+    {
+        yield return new WaitForSeconds(16f);
+        openChestAudio.Stop();
+        backgroundMusic.loop = true;
+        backgroundMusic.Play();
     }
 }

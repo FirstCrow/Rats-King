@@ -19,9 +19,9 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
-  - 
+  - Minimap
+  - Lighting
+  - MinimapLight
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2862787793
+    locked: 0
+  - name: Minimap
+    uniqueID: 3912069989
     locked: 0

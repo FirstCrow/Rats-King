@@ -128,15 +128,6 @@ public class PlayerController : DamageableEntity
                 healVFX.Play();
                 healSFX.Play();
             }
-            if (Input.GetKeyUp(KeyCode.R) && healing)   //Stop healing
-            {
-                healingTime = 0;
-                healing = false;
-                //animate
-
-                healVFX.Stop();
-                healSFX.Stop();
-            }
             if (healingTime > 0)    //In process of Healing
             {
                 healingTime += Time.deltaTime;
@@ -158,6 +149,15 @@ public class PlayerController : DamageableEntity
                     }
                 }
                 
+            }
+            if (Input.GetKeyUp(KeyCode.R) && healing)   //Stop healing
+            {
+                healingTime = 0;
+                healing = false;
+                //animate
+
+                healVFX.Stop();
+                healSFX.Stop();
             }
 
             direction.x = Input.GetAxisRaw("Horizontal");   //Get Horizontal Inputs (A or D | Left or Right)
