@@ -12,6 +12,7 @@ public class MouseBehavior : DamageableEntity
     public GameObject player;
     private int direction;
     private float scale;
+    public AudioSource attackSFX;
 
 
     [Header("Enemy Footsteps")]
@@ -55,6 +56,7 @@ public class MouseBehavior : DamageableEntity
             Debug.Log("Mouse Attacking");
             //play attack animation
             attacking = true;
+            attackSFX.Play();
         }
         else
         {

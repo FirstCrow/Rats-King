@@ -90,12 +90,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2629294240885434098, guid: 68393a964fec3944a97070ff076d92a4, type: 3}
       propertyPath: m_Volume
-      value: 0
+      value: 0.054
       objectReference: {fileID: 0}
     - target: {fileID: 2629294240885434098, guid: 68393a964fec3944a97070ff076d92a4, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: a454b35d3626d8a468391218e51068f7, type: 3}
+      objectReference: {fileID: 8300000, guid: 97718bc6f2e6a8a43b775f296bf0a891, type: 3}
     - target: {fileID: 2629294240885434099, guid: 68393a964fec3944a97070ff076d92a4, type: 3}
       propertyPath: m_Name
       value: BackgroundMusic

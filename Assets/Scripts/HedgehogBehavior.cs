@@ -31,7 +31,6 @@ public class HedgehogBehavior : DamageableEntity
     {
         randompoint = transform.position + new Vector3(Random.Range(-5,5), Random.Range(-5, 5), 0f);
         randomsteps = Random.Range(10, 500);
-
         footstep.loop = false;
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
