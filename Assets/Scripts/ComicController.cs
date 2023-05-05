@@ -32,7 +32,7 @@ public class ComicController : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.Mouse0) && currentPanel == panels.Length-1)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(2);
         }
 
         //Show next panel
