@@ -103,7 +103,7 @@ public class TitleScreen : MonoBehaviour
     }
 }
 
-[CustomEditor(typeof(TitleScreen))]
+/*[CustomEditor(typeof(TitleScreen))]
 public class TitleScreenEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -116,4 +116,4 @@ public class TitleScreenEditor : Editor
             titleScript.AddArrowPosition();
         }
     }
-}
+}*/
