@@ -146,6 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2374184c24d355e4ea1b4794e546eb51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cheeseDrops: {fileID: 0}
-  maxCheese: 50
+  cheeseDrops: {fileID: 9160340236173959928, guid: 6faa514b93e249c4a90fa2da4faf3f53, type: 3}
+  maxCheese: 100
   HP: 10
